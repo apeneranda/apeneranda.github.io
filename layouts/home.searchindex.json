@@ -1,0 +1,28 @@
+{{- /* Index de recherche : une entrée par page de la langue courante. */ -}}
+{{- $p := hugo.Data.profil -}}
+{{- $t := index $p site.Language.Lang -}}
+{{- $out := slice -}}
+{{- range site.Pages -}}
+  {{- if in (slice "home" "page" "section") .Kind -}}
+    {{- $isPub := and (eq .Kind "page") (eq .Section "publications") -}}
+    {{- $title := .Title -}}
+    {{- $text := .Plain -}}
+    {{- if .IsHome -}}
+      {{- $title = site.Title -}}
+      {{- $edu := slice -}}
+      {{- range $t.formation }}{{ $edu = $edu | append (printf "%s %s %v" .diplome .etablissement .annee) }}{{ end -}}
+      {{- $text = printf "%s %s %s %s" $t.titre $text (delimit $t.centres_d_interet " ") (delimit $edu " ") -}}
+    {{- else if $isPub -}}
+      {{- $text = .Params.citation | plainify | htmlUnescape -}}
+    {{- else if eq .Path "/contact" -}}
+      {{- $text = printf "%s %s %s" $p.contact.email (delimit $p.contact.adresse " ") $t.bureau -}}
+    {{- end -}}
+    {{- $out = $out | append (dict
+        "t" $title
+        "u" .RelPermalink
+        "k" (cond $isPub "pub" "page")
+        "y" (cond $isPub .Date.Year 0)
+        "x" (replaceRE `\s+` " " ($text | htmlUnescape))) -}}
+  {{- end -}}
+{{- end -}}
+{{- $out | jsonify -}}

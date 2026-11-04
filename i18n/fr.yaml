@@ -38,3 +38,13 @@ type_chapitre: Chapitre d'ouvrage
 type_communication: Communication
 type_rapport: Cahier de recherche
 type_autre: Autre article ou diffusion
+# Recherche
+recherche: "Rechercher dans le site"
+recherche_placeholder: "Rechercher (publication, thème, auteur…)"
+recherche_aide: "Tapez un mot : titre, auteur, revue, thème…"
+recherche_aucun: "Aucun résultat."
+recherche_un: 1 résultat
+recherche_plusieurs: "%d résultats"
+recherche_erreur: "La recherche est indisponible pour le moment."
+recherche_pub: "Publication"
+recherche_page: "Page"

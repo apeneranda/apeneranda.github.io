@@ -67,6 +67,16 @@ disableKinds = ["taxonomy", "term", "RSS"]
     pageRef = "/contact"
     weight = 50
 
+# Index de recherche (search.json pour l'anglais, fr/search.json pour le français)
+[outputFormats.searchindex]
+  mediaType = "application/json"
+  baseName = "search"
+  isPlainText = true
+  notAlternative = true
+
+[outputs]
+  home = ["html", "searchindex"]
+
 [markup.goldmark.renderer]
   unsafe = true
 

@@ -9,6 +9,8 @@ et <https://apeneranda.github.io/fr/> (français).
 - Publications : `publications.bib` (+ `publications-en.json` pour les titres traduits) →
   `scripts/import_publications.py` (bibliothèque standard Python) → une page par référence
   et par langue, régénérées à chaque publication.
+- Recherche : index JSON par langue (`layouts/home.searchindex.json` → `/search.json`,
+  `/fr/search.json`) interrogé dans le navigateur par `assets/js/search.js`, sans service extérieur.
 - Déploiement : GitHub Actions → GitHub Pages (`.github/workflows/deploy.yml`).
 - Aucun cookie, aucune mesure d'audience, aucune ressource tierce chargée par les pages.
 

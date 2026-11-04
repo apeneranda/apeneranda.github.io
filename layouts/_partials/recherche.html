@@ -1,0 +1,23 @@
+{{- /* Fenêtre de recherche + script. L'index est le format de sortie « searchindex » de l'accueil. */ -}}
+{{- with site.Home.OutputFormats.Get "searchindex" -}}
+<dialog id="search-dialog" class="search-dialog" aria-label="{{ i18n "recherche" }}"
+  data-index="{{ .RelPermalink }}"
+  data-hint="{{ i18n "recherche_aide" }}"
+  data-none="{{ i18n "recherche_aucun" }}"
+  data-single="{{ i18n "recherche_un" }}"
+  data-many="{{ i18n "recherche_plusieurs" }}"
+  data-error="{{ i18n "recherche_erreur" }}"
+  data-pub="{{ i18n "recherche_pub" }}"
+  data-page="{{ i18n "recherche_page" }}">
+  <div class="search-head">
+    <span class="search-icon">{{ partial "icone.html" "loupe" }}</span>
+    <input type="search" placeholder="{{ i18n "recherche_placeholder" }}" aria-label="{{ i18n "recherche" }}" autocomplete="off" spellcheck="false">
+    <button type="button" class="search-close" aria-label="{{ i18n "fermer" }}">×</button>
+  </div>
+  <p class="search-status" role="status" aria-live="polite"></p>
+  <ul class="search-results"></ul>
+</dialog>
+{{- with resources.Get "js/search.js" | minify | fingerprint }}
+<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+{{- end }}
+{{- end -}}

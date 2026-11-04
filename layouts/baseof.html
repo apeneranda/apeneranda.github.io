@@ -26,7 +26,6 @@
     <div class="container navbar-inner">
       <a class="brand" href="{{ site.Home.RelPermalink }}">{{ hugo.Data.profil.nom }}</a>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="{{ i18n "menu" }}">
-      <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
       <nav aria-label="{{ i18n "nav_principale" }}">
         <ul>
           {{ $current := . }}
@@ -36,6 +35,10 @@
           {{ partial "langue.html" . }}
         </ul>
       </nav>
+      <div class="navbar-tools">
+        <button type="button" id="search-open" class="search-open" aria-label="{{ i18n "recherche" }}" title="{{ i18n "recherche" }}">{{ partial "icone.html" "loupe" }}</button>
+        <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
+      </div>
     </div>
   </header>
 
@@ -49,6 +52,7 @@
       <p class="muted">{{ i18n "pied" | safeHTML }}</p>
     </div>
   </footer>
+  {{ partial "recherche.html" . }}
   {{ block "scripts" . }}{{ end }}
 </body>
 </html>

@@ -36,3 +36,13 @@ type_chapitre: Book chapter
 type_communication: Conference paper
 type_rapport: Working paper
 type_autre: Other article or outreach
+# Recherche
+recherche: "Search the site"
+recherche_placeholder: "Search (publication, topic, author…)"
+recherche_aide: "Type a word: title, author, journal, topic…"
+recherche_aucun: "No results."
+recherche_un: 1 result
+recherche_plusieurs: "%d results"
+recherche_erreur: "Search is unavailable at the moment."
+recherche_pub: "Publication"
+recherche_page: "Page"

@@ -55,6 +55,12 @@ Règles lues dans le `.bib` :
 - Une rubrique inconnue ou une clé en double fait échouer la publication : le site en
   ligne reste alors inchangé et l'onglet *Actions* affiche l'erreur.
 
+## Recherche
+
+La loupe en haut à droite (raccourci clavier : touche `/`) cherche dans toutes les pages et
+publications de la langue affichée. Son index est recalculé automatiquement à chaque
+publication : rien à faire.
+
 ## Modifier les textes
 
 Le site existe en anglais (langue par défaut, à la racine : <https://apeneranda.github.io/>)
