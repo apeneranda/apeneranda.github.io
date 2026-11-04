@@ -183,14 +183,15 @@ main { min-height: 70vh; }
 .footer p { margin: 4px 0; }
 .prose h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 1.4em 0 .5em; }
 
-/* Changement de langue */
-.navbar nav .lang-switch a {
-  margin-left: 8px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 6px;
-  font-size: .85rem; font-weight: 600; letter-spacing: .04em; color: var(--muted);
+/* Changement de langue : drapeau */
+.navbar nav .lang-switch a { display: flex; align-items: center; padding: 8px 10px; }
+.navbar nav .lang-switch .flag {
+  display: block; width: 24px; height: 16px; border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15);
 }
-.navbar nav .lang-switch a:hover { border-color: var(--primary); color: var(--primary); }
+.navbar nav .lang-switch a:hover .flag { box-shadow: 0 0 0 2px var(--primary); }
 @media (max-width: 760px) {
-  .navbar nav .lang-switch a { display: inline-block; margin: 6px 0 0 14px; }
+  .navbar nav .lang-switch a { padding: 10px 14px; }
 }
 .pub-intro { color: var(--muted); margin: -12px 0 8px; }
 .pub-intro p { margin: 0; }

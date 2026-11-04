@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/legal-notice/"]
 title: Legal Notice
 slug: legal-notice
 ---

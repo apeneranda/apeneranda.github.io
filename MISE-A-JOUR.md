@@ -13,7 +13,8 @@ tout peut se faire depuis l'interface web de GitHub.
 2. Sur GitHub, ouvrir le dossier `static/files/`, cliquer sur **Add file → Upload files**,
    déposer le nouveau `cv.pdf` (même nom) et valider (**Commit changes**).
 
-Le CV reste servi à l'adresse <https://apeneranda.github.io/files/cv.pdf>.
+Le CV français est servi à l'adresse <https://apeneranda.github.io/files/cv.pdf>
+(lien « CV » de la version française).
 
 **CV anglais** : même opération avec `static/files/cv-en.pdf` (lien « CV » de la version
 anglaise, <https://apeneranda.github.io/files/cv-en.pdf>).
@@ -56,15 +57,17 @@ Règles lues dans le `.bib` :
 
 ## Modifier les textes
 
-Le site existe en français (à la racine) et en anglais (sous `/en/`). Chaque page a deux
-fichiers : `nom.md` pour le français, `nom.en.md` pour l'anglais. Penser à modifier les deux.
+Le site existe en anglais (langue par défaut, à la racine : <https://apeneranda.github.io/>)
+et en français (sous `/fr/` : <https://apeneranda.github.io/fr/>). Un petit drapeau, à
+droite du menu, mène à la même page dans l'autre langue. Chaque page a deux fichiers :
+`nom.en.md` pour l'anglais, `nom.fr.md` pour le français. Penser à modifier les deux.
 
-| Contenu | Français | Anglais |
+| Contenu | Anglais | Français |
 |---|---|---|
-| Bio courte (accueil) | `content/_index.md` | `content/_index.en.md` |
-| Bio longue, fonctions, parcours, conférences | `content/bio.md` | `content/bio.en.md` |
-| Enseignement et encadrement | `content/enseignement.md` | `content/enseignement.en.md` |
-| Mentions légales | `content/mentions-legales.md` | `content/mentions-legales.en.md` |
+| Bio courte (accueil) | `content/_index.en.md` | `content/_index.fr.md` |
+| Bio longue, fonctions, parcours, conférences | `content/bio.en.md` | `content/bio.fr.md` |
+| Enseignement et encadrement | `content/enseignement.en.md` | `content/enseignement.fr.md` |
+| Mentions légales | `content/mentions-legales.en.md` | `content/mentions-legales.fr.md` |
 
 | Autres réglages | Fichier |
 |---|---|

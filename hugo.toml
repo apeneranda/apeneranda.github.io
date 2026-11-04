@@ -1,5 +1,5 @@
 baseURL = "https://apeneranda.github.io/"
-defaultContentLanguage = "fr"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 title = "Adrien Peneranda"
 enableRobotsTXT = true
@@ -9,38 +9,9 @@ disableKinds = ["taxonomy", "term", "RSS"]
   # Clés BibTeX des publications mises en avant en tête de la page Publications
   featured = ["peneranda2025marcel", "amabile2018management", "peneranda2017aristote"]
 
-# Français : à la racine du site (https://apeneranda.github.io/)
-[languages.fr]
-  weight = 1
-  label = "Français"
-  locale = "fr-FR"
-  [languages.fr.params]
-    description = "Adrien Peneranda, maître de conférences en sciences de gestion à Sciences Po Toulouse (LEREPS) : management public, systèmes d'information, philosophie des sciences de gestion."
-    cv = "/files/cv.pdf"
-  [[languages.fr.menus.main]]
-    name = "Bio"
-    pageRef = "/bio"
-    weight = 10
-  [[languages.fr.menus.main]]
-    name = "Publications"
-    pageRef = "/publications"
-    weight = 20
-  [[languages.fr.menus.main]]
-    name = "Enseignement"
-    pageRef = "/enseignement"
-    weight = 30
-  [[languages.fr.menus.main]]
-    name = "CV"
-    url = "/files/cv.pdf"
-    weight = 40
-  [[languages.fr.menus.main]]
-    name = "Contact"
-    pageRef = "/contact"
-    weight = 50
-
-# Anglais : sous /en/ (https://apeneranda.github.io/en/)
+# Anglais (langue par défaut) : à la racine du site (https://apeneranda.github.io/)
 [languages.en]
-  weight = 2
+  weight = 1
   label = "English"
   locale = "en-GB"
   [languages.en.params]
@@ -63,6 +34,35 @@ disableKinds = ["taxonomy", "term", "RSS"]
     url = "/files/cv-en.pdf"
     weight = 40
   [[languages.en.menus.main]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 50
+
+# Français : sous /fr/ (https://apeneranda.github.io/fr/)
+[languages.fr]
+  weight = 2
+  label = "Français"
+  locale = "fr-FR"
+  [languages.fr.params]
+    description = "Adrien Peneranda, maître de conférences en sciences de gestion à Sciences Po Toulouse (LEREPS) : management public, systèmes d'information, philosophie des sciences de gestion."
+    cv = "/files/cv.pdf"
+  [[languages.fr.menus.main]]
+    name = "Bio"
+    pageRef = "/bio"
+    weight = 10
+  [[languages.fr.menus.main]]
+    name = "Publications"
+    pageRef = "/publications"
+    weight = 20
+  [[languages.fr.menus.main]]
+    name = "Enseignement"
+    pageRef = "/enseignement"
+    weight = 30
+  [[languages.fr.menus.main]]
+    name = "CV"
+    url = "/files/cv.pdf"
+    weight = 40
+  [[languages.fr.menus.main]]
     name = "Contact"
     pageRef = "/contact"
     weight = 50

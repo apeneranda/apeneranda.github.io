@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/teaching/"]
 title: Teaching and Supervision
 slug: teaching
 ---

@@ -4,7 +4,7 @@
 Usage : python3 scripts/import_publications.py
 
 Lit `publications.bib` (racine du dépôt) et (ré)écrit `content/publications/<clé>/`
-(index.md en français, index.en.md en anglais, cite.bib). Les dossiers générés sont
+(index.en.md en anglais, index.fr.md en français, cite.bib). Les dossiers générés sont
 recréés à chaque exécution.
 
 Version anglaise : `publications-en.json` associe à une clé BibTeX soit la traduction
@@ -288,7 +288,7 @@ def main():
         d = OUT / key
         d.mkdir(parents=True)
         (d / "cite.bib").write_text(bib, encoding="utf-8")
-        for lang, fname in (("fr", "index.md"), ("en", "index.en.md")):
+        for lang, fname in (("en", "index.en.md"), ("fr", "index.fr.md")):
             titre = title_for(e, lang, tr)
             front = {
                 "title": re.sub(r"<[^>]+>", "", html.unescape(titre)),

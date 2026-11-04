@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/publications/"]
 title: Publications
 ---
 

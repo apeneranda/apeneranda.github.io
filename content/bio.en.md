@@ -1,4 +1,5 @@
 ---
+aliases: ["/en/bio/"]
 title: Bio
 ---
 
