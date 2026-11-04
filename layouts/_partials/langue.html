@@ -1,0 +1,10 @@
+{{- /* Lien vers l'autre langue : la traduction de la page si elle existe, sinon l'accueil de cette langue. */ -}}
+{{- $page := . -}}
+{{- range site.Home.AllTranslations -}}
+  {{- if ne .Language.Lang site.Language.Lang -}}
+    {{- $lang := .Language.Lang -}}
+    {{- $url := .RelPermalink -}}
+    {{- range $page.Translations -}}{{- if eq .Language.Lang $lang -}}{{- $url = .RelPermalink -}}{{- end -}}{{- end -}}
+<li class="lang-switch"><a href="{{ $url }}" hreflang="{{ $lang }}" lang="{{ $lang }}" title="{{ .Language.Label }}" aria-label="{{ i18n "autre_langue" }}">{{ upper $lang }}</a></li>
+  {{- end -}}
+{{- end -}}

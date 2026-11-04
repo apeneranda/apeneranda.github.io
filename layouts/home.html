@@ -1,40 +1,43 @@
 {{ define "main" }}
 {{ $p := hugo.Data.profil }}
+{{ $lang := site.Language.Lang }}
+{{ $t := index $p $lang }}
 <section class="container about">
   <div class="profile">
     {{ with resources.Get "img/avatar.jpg" }}
       {{ $img := .Fill "540x540 Center q90" }}
-      <img class="avatar" src="{{ $img.RelPermalink }}" width="270" height="270" alt="Portrait de {{ $p.nom }}">
+      <img class="avatar" src="{{ $img.RelPermalink }}" width="270" height="270" alt="{{ i18n "portrait" }} {{ $p.nom }}">
     {{ else }}
       <div class="avatar avatar-initiales" aria-hidden="true">AP</div>
     {{ end }}
     <h1 class="profile-name">{{ $p.nom }}</h1>
-    <p class="profile-role">{{ $p.titre }}</p>
+    <p class="profile-role">{{ $t.titre }}</p>
     {{ range $p.organisations }}
     <p class="profile-org"><a href="{{ .url }}">{{ .nom }}</a></p>
     {{ end }}
     <ul class="social">
       {{ range $p.liens }}
-      <li><a href="{{ .url }}" title="{{ .libelle }}" aria-label="{{ .libelle }}">{{ partial "icone.html" .icone }}</a></li>
+      {{ $label := cond (and (eq $lang "en") .libelle_en) .libelle_en .libelle }}
+      <li><a href="{{ .url }}" title="{{ $label }}" aria-label="{{ $label }}">{{ partial "icone.html" .icone }}</a></li>
       {{ end }}
-      <li><a href="{{ "/files/cv.pdf" | relURL }}" title="CV (PDF)" aria-label="CV (PDF)">{{ partial "icone.html" "cv" }}</a></li>
+      <li><a href="{{ site.Params.cv }}" title="{{ i18n "cv_pdf" }}" aria-label="{{ i18n "cv_pdf" }}">{{ partial "icone.html" "cv" }}</a></li>
     </ul>
   </div>
 
   <div class="about-text">
-    <h2>Biographie</h2>
+    <h2>{{ i18n "biographie" }}</h2>
     {{ .Content }}
     <div class="about-cols">
       <div>
-        <h3>Centres d'intérêt</h3>
+        <h3>{{ i18n "interets" }}</h3>
         <ul class="ul-interests">
-          {{ range $p.centres_d_interet }}<li>{{ . }}</li>{{ end }}
+          {{ range $t.centres_d_interet }}<li>{{ . }}</li>{{ end }}
         </ul>
       </div>
       <div>
-        <h3>Formation</h3>
+        <h3>{{ i18n "formation" }}</h3>
         <ul class="ul-edu">
-          {{ range $p.formation }}
+          {{ range $t.formation }}
           <li>
             <p class="course">{{ .diplome }}, {{ .annee }}</p>
             <p class="institution">{{ .etablissement }}</p>

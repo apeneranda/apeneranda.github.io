@@ -182,3 +182,17 @@ main { min-height: 70vh; }
 .footer { border-top: 1px solid var(--border); padding: 24px 0; text-align: center; font-size: .9rem; }
 .footer p { margin: 4px 0; }
 .prose h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 1.4em 0 .5em; }
+
+/* Changement de langue */
+.navbar nav .lang-switch a {
+  margin-left: 8px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 6px;
+  font-size: .85rem; font-weight: 600; letter-spacing: .04em; color: var(--muted);
+}
+.navbar nav .lang-switch a:hover { border-color: var(--primary); color: var(--primary); }
+@media (max-width: 760px) {
+  .navbar nav .lang-switch a { display: inline-block; margin: 6px 0 0 14px; }
+}
+.pub-intro { color: var(--muted); margin: -12px 0 8px; }
+.pub-intro p { margin: 0; }
+.navbar nav ul { align-items: center; }
+@media (max-width: 760px) { .navbar nav ul { align-items: stretch; } }

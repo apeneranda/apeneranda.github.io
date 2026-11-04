@@ -1,0 +1,38 @@
+biographie: Biography
+interets: Interests
+formation: Education
+portrait: Portrait of
+cv_pdf: CV (PDF)
+mentions: Legal notice
+pied: No cookies, no analytics · built with <a href="https://gohugo.io/">Hugo</a>, hosted on GitHub Pages
+nav_principale: Main navigation
+menu: Menu
+autre_langue: French version
+pubs_choisies: Selected publications
+pubs_toutes: All publications
+rubriques: Categories
+notice: Details
+citer: Cite
+copier: Copy
+copie: Copied
+telecharger: Download
+fermer: Close
+chargement: Loading…
+indisponible: Reference unavailable.
+annee: Year
+publie_dans: Published in
+reference: Reference
+voir_hal: View on HAL
+carte: View on map (OpenStreetMap)
+groupe_article: Articles in peer-reviewed journals
+groupe_livre: Books, series editing and special issues
+groupe_chapitre: Book chapters
+groupe_communication: Conference papers
+groupe_rapport: Working papers
+groupe_autre: Other articles and public outreach
+type_article: Article in a peer-reviewed journal
+type_livre: Book
+type_chapitre: Book chapter
+type_communication: Conference paper
+type_rapport: Working paper
+type_autre: Other article or outreach

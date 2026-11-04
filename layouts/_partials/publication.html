@@ -3,8 +3,8 @@
 <li class="pub" id="{{ $key }}">
   <p class="pub-cite">{{ .Params.citation | safeHTML }}</p>
   <p class="pub-links">
-    <a class="btn" href="{{ .RelPermalink }}">Notice</a>
+    <a class="btn" href="{{ .RelPermalink }}">{{ i18n "notice" }}</a>
     {{ with .Params.hal }}<a class="btn" href="{{ . }}">HAL</a>{{ end }}
-    {{ with .Resources.GetMatch "cite.bib" }}<button type="button" class="btn js-cite" data-bib="{{ .RelPermalink }}" data-file="{{ $key }}.bib">Citer</button>{{ end }}
+    {{ with .Resources.GetMatch "cite.bib" }}<button type="button" class="btn js-cite" data-bib="{{ .RelPermalink }}" data-file="{{ $key }}.bib">{{ i18n "citer" }}</button>{{ end }}
   </p>
 </li>

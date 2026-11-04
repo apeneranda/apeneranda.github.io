@@ -1,33 +1,68 @@
 baseURL = "https://apeneranda.github.io/"
-locale = "fr-FR"
 defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
 title = "Adrien Peneranda"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
-  description = "Adrien Peneranda, maître de conférences en sciences de gestion à Sciences Po Toulouse (LEREPS) : management public, systèmes d'information, philosophie des sciences de gestion."
   # Clés BibTeX des publications mises en avant en tête de la page Publications
   featured = ["peneranda2025marcel", "amabile2018management", "peneranda2017aristote"]
 
-[menus]
-  [[menus.main]]
+# Français : à la racine du site (https://apeneranda.github.io/)
+[languages.fr]
+  weight = 1
+  label = "Français"
+  locale = "fr-FR"
+  [languages.fr.params]
+    description = "Adrien Peneranda, maître de conférences en sciences de gestion à Sciences Po Toulouse (LEREPS) : management public, systèmes d'information, philosophie des sciences de gestion."
+    cv = "/files/cv.pdf"
+  [[languages.fr.menus.main]]
     name = "Bio"
     pageRef = "/bio"
     weight = 10
-  [[menus.main]]
+  [[languages.fr.menus.main]]
     name = "Publications"
     pageRef = "/publications"
     weight = 20
-  [[menus.main]]
+  [[languages.fr.menus.main]]
     name = "Enseignement"
     pageRef = "/enseignement"
     weight = 30
-  [[menus.main]]
+  [[languages.fr.menus.main]]
     name = "CV"
     url = "/files/cv.pdf"
     weight = 40
-  [[menus.main]]
+  [[languages.fr.menus.main]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 50
+
+# Anglais : sous /en/ (https://apeneranda.github.io/en/)
+[languages.en]
+  weight = 2
+  label = "English"
+  locale = "en-GB"
+  [languages.en.params]
+    description = "Adrien Peneranda, Associate Professor of Management at Sciences Po Toulouse (LEREPS): public management, information systems, philosophy of management."
+    cv = "/files/cv-en.pdf"
+  [[languages.en.menus.main]]
+    name = "Bio"
+    pageRef = "/bio"
+    weight = 10
+  [[languages.en.menus.main]]
+    name = "Publications"
+    pageRef = "/publications"
+    weight = 20
+  [[languages.en.menus.main]]
+    name = "Teaching"
+    pageRef = "/enseignement"
+    weight = 30
+  [[languages.en.menus.main]]
+    name = "CV"
+    url = "/files/cv-en.pdf"
+    weight = 40
+  [[languages.en.menus.main]]
     name = "Contact"
     pageRef = "/contact"
     weight = 50

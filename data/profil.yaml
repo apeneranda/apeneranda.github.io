@@ -1,8 +1,8 @@
 # Identité et coordonnées affichées sur le site (accueil, contact, pied de page).
-# Pour ajouter un lien (ORCID, LinkedIn…), ajoutez une ligne dans « liens ».
+# Les textes qui changent selon la langue sont dans les blocs « fr » et « en ».
+# Pour ajouter un lien, ajoutez une ligne dans « liens » (libelle_en facultatif).
 
 nom: Adrien Peneranda
-titre: Maître de conférences en sciences de gestion
 
 organisations:
   - nom: Sciences Po Toulouse
@@ -10,27 +10,48 @@ organisations:
   - nom: LEREPS (EA 4212)
     url: https://lereps.sciencespo-toulouse.fr/
 
-centres_d_interet:
-  - Management public
-  - Management des systèmes d'information
-  - Philosophie des sciences de gestion
-  - Éthique et complexité
-  - Biens communs de la connaissance
+fr:
+  titre: Maître de conférences en sciences de gestion
+  bureau: Bureau MD 421
+  centres_d_interet:
+    - Management public
+    - Management des systèmes d'information
+    - Philosophie des sciences de gestion
+    - Éthique et complexité
+    - Biens communs de la connaissance
+  formation:
+    - diplome: Doctorat en sciences de gestion
+      etablissement: Aix-Marseille Université
+      annee: 2014
+    - diplome: Master recherche en sciences de gestion (major de promotion)
+      etablissement: IMPGT, Aix-Marseille Université
+      annee: 2010
+    - diplome: Programme Grande École, spécialité management des systèmes d'information
+      etablissement: IESEG School of Management
+      annee: 2009
 
-formation:
-  - diplome: Doctorat en sciences de gestion
-    etablissement: Aix-Marseille Université
-    annee: 2014
-  - diplome: Master recherche en sciences de gestion (major de promotion)
-    etablissement: IMPGT, Aix-Marseille Université
-    annee: 2010
-  - diplome: Programme Grande École, spécialité management des systèmes d'information
-    etablissement: IESEG School of Management
-    annee: 2009
+en:
+  titre: Associate Professor of Management
+  bureau: Office MD 421
+  centres_d_interet:
+    - Public management
+    - Information systems management
+    - Philosophy of management
+    - Ethics and complexity
+    - Knowledge commons
+  formation:
+    - diplome: PhD in Management Sciences
+      etablissement: Aix-Marseille University
+      annee: 2014
+    - diplome: Research Master's in Management Sciences (ranked first in class)
+      etablissement: IMPGT, Aix-Marseille University
+      annee: 2010
+    - diplome: Grande École programme, major in information systems management
+      etablissement: IESEG School of Management
+      annee: 2009
 
 contact:
   email: adrien.peneranda@sciencespo-toulouse.fr
-  bureau: Bureau MD 421
   adresse:
     - Sciences Po Toulouse — Manufacture des Tabacs
     - 21 allée de Brienne
@@ -51,6 +72,7 @@ liens:
     url: https://orcid.org/0000-0002-3210-3202
   - icone: hal
     libelle: CV HAL
+    libelle_en: HAL CV
     url: https://cv.hal.science/adrien-peneranda
   - icone: linkedin
     libelle: LinkedIn
@@ -60,6 +82,7 @@ liens:
     url: https://shs.cairn.info/publications-de-adrien-peneranda--138972
   - icone: web
     libelle: Page LEREPS
+    libelle_en: LEREPS page
     url: https://lereps.sciencespo-toulouse.fr/peneranda-adrien-645
   - icone: github
     libelle: GitHub

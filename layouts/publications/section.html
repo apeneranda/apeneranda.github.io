@@ -1,15 +1,9 @@
 {{ define "main" }}
-{{ $types := slice
-  (dict "id" "article" "titre" "Articles dans des revues à comité de lecture")
-  (dict "id" "livre" "titre" "Ouvrages, directions de collection et numéros thématiques")
-  (dict "id" "chapitre" "titre" "Chapitres d'ouvrages")
-  (dict "id" "communication" "titre" "Communications")
-  (dict "id" "rapport" "titre" "Cahiers de recherche")
-  (dict "id" "autre" "titre" "Autres articles et diffusion")
-}}
+{{ $types := slice "article" "livre" "chapitre" "communication" "rapport" "autre" }}
 {{ $pubs := .RegularPages.ByDate.Reverse }}
 <article class="container page">
   <h1>{{ .Title }}</h1>
+  {{ with .Content }}<div class="pub-intro">{{ . }}</div>{{ end }}
 
   {{ $featured := slice }}
   {{ range site.Params.featured }}
@@ -18,7 +12,7 @@
   {{ end }}
   {{ with $featured }}
   <section class="pub-featured">
-    <h2>Publications choisies</h2>
+    <h2>{{ i18n "pubs_choisies" }}</h2>
     <div class="featured-grid">
       {{ range . }}
       {{ $key := .Params.key }}
@@ -28,7 +22,7 @@
         <p class="featured-authors">{{ .Params.auteurs | safeHTML }}</p>
         <p class="pub-links">
           {{ with .Params.hal }}<a class="btn" href="{{ . }}">HAL</a>{{ end }}
-          {{ with .Resources.GetMatch "cite.bib" }}<button type="button" class="btn js-cite" data-bib="{{ .RelPermalink }}" data-file="{{ $key }}.bib">Citer</button>{{ end }}
+          {{ with .Resources.GetMatch "cite.bib" }}<button type="button" class="btn js-cite" data-bib="{{ .RelPermalink }}" data-file="{{ $key }}.bib">{{ i18n "citer" }}</button>{{ end }}
         </p>
       </div>
       {{ end }}
@@ -36,19 +30,19 @@
   </section>
   {{ end }}
 
-  <h2>Toutes les publications ({{ len $pubs }})</h2>
-  <nav class="pub-toc" aria-label="Rubriques">
+  <h2>{{ i18n "pubs_toutes" }} ({{ len $pubs }})</h2>
+  <nav class="pub-toc" aria-label="{{ i18n "rubriques" }}">
     {{ range $types }}
-      {{ $n := len (where $pubs "Params.type_pub" .id) }}
-      {{ if $n }}<a href="#{{ .id }}">{{ .titre }} <span class="count">{{ $n }}</span></a>{{ end }}
+      {{ $n := len (where $pubs "Params.type_pub" .) }}
+      {{ if $n }}<a href="#{{ . }}">{{ i18n (printf "groupe_%s" .) }} <span class="count">{{ $n }}</span></a>{{ end }}
     {{ end }}
   </nav>
 
   {{ range $types }}
     {{ $t := . }}
-    {{ with where $pubs "Params.type_pub" $t.id }}
-    <section class="pub-group" id="{{ $t.id }}">
-      <h3>{{ $t.titre }}</h3>
+    {{ with where $pubs "Params.type_pub" $t }}
+    <section class="pub-group" id="{{ $t }}">
+      <h3>{{ i18n (printf "groupe_%s" $t) }}</h3>
       <ul class="pub-list">
         {{ range . }}{{ partial "publication.html" . }}{{ end }}
       </ul>

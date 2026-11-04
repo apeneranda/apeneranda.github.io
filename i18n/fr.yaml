@@ -1,0 +1,40 @@
+biographie: Biographie
+interets: Centres d'intérêt
+formation: Formation
+portrait: Portrait de
+cv_pdf: CV (PDF)
+mentions: Mentions légales
+pied: Site sans cookie ni mesure d'audience · réalisé avec <a href="https://gohugo.io/">Hugo</a>, hébergé par GitHub Pages
+nav_principale: Navigation principale
+menu: Menu
+autre_langue: Version anglaise
+pubs_choisies: Publications choisies
+pubs_toutes: Toutes les publications
+rubriques: Rubriques
+notice: Notice
+citer: Citer
+copier: Copier
+copie: Copié
+telecharger: Télécharger
+fermer: Fermer
+chargement: Chargement…
+indisponible: Référence indisponible.
+annee: Année
+publie_dans: Publié dans
+reference: Référence
+voir_hal: Voir sur HAL
+carte: Voir sur la carte (OpenStreetMap)
+# Rubriques des publications (titres de la page Publications)
+groupe_article: Articles dans des revues à comité de lecture
+groupe_livre: Ouvrages, directions de collection et numéros thématiques
+groupe_chapitre: Chapitres d'ouvrages
+groupe_communication: Communications
+groupe_rapport: Cahiers de recherche
+groupe_autre: Autres articles et diffusion
+# Type affiché sur la page d'une publication
+type_article: Article dans une revue à comité de lecture
+type_livre: Ouvrage
+type_chapitre: Chapitre d'ouvrage
+type_communication: Communication
+type_rapport: Cahier de recherche
+type_autre: Autre article ou diffusion

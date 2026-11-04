@@ -1,12 +1,14 @@
 # apeneranda.github.io
 
 Site académique d'Adrien Peneranda, maître de conférences en sciences de gestion à
-Sciences Po Toulouse (LEREPS) : <https://apeneranda.github.io>.
+Sciences Po Toulouse (LEREPS) : <https://apeneranda.github.io> (français)
+et <https://apeneranda.github.io/en/> (anglais).
 
 - Générateur : [Hugo](https://gohugo.io/) 0.162.0, gabarits propres au dépôt (aucun thème ni
   module externe), mise en page inspirée du thème Academic.
-- Publications : `publications.bib` → `scripts/import_publications.py` (bibliothèque standard
-  Python) → une page par référence, régénérées à chaque publication.
+- Publications : `publications.bib` (+ `publications-en.json` pour les titres traduits) →
+  `scripts/import_publications.py` (bibliothèque standard Python) → une page par référence
+  et par langue, régénérées à chaque publication.
 - Déploiement : GitHub Actions → GitHub Pages (`.github/workflows/deploy.yml`).
 - Aucun cookie, aucune mesure d'audience, aucune ressource tierce chargée par les pages.
 

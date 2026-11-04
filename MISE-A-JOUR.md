@@ -15,6 +15,9 @@ tout peut se faire depuis l'interface web de GitHub.
 
 Le CV reste servi à l'adresse <https://apeneranda.github.io/files/cv.pdf>.
 
+**CV anglais** : même opération avec `static/files/cv-en.pdf` (lien « CV » de la version
+anglaise, <https://apeneranda.github.io/files/cv-en.pdf>).
+
 ## Remplacer les publications
 
 1. Produire le nouveau `publications.bib` (dans le coffre Dacom) :
@@ -39,6 +42,13 @@ Règles lues dans le `.bib` :
 | `revue`, `diffusion` | Autres articles et diffusion |
 
 - Le champ `hal` (et `url`) ajoute un bouton **HAL**.
+- **Version anglaise** : `publications-en.json` (racine du dépôt) donne, pour chaque clé
+  BibTeX, la traduction du titre, affichée entre crochets après le titre original :
+  `"peneranda2017aristote": "Aristotle, Moral Action and Management"`.
+  Pour une nouvelle publication, ajouter une ligne de ce type (sinon le titre reste seul,
+  sans traduction ; le journal de l'onglet *Actions* liste les clés sans traduction).
+  Pour remplacer tout le titre (recensions, entretiens) :
+  `"cle": {"title": "Review of …"}`. Une valeur vide `""` convient aux titres déjà en anglais.
 - Les publications mises en avant sont listées par clé BibTeX dans `hugo.toml`
   (ligne `featured = [...]`).
 - Une rubrique inconnue ou une clé en double fait échouer la publication : le site en
@@ -46,14 +56,21 @@ Règles lues dans le `.bib` :
 
 ## Modifier les textes
 
-| Contenu | Fichier |
+Le site existe en français (à la racine) et en anglais (sous `/en/`). Chaque page a deux
+fichiers : `nom.md` pour le français, `nom.en.md` pour l'anglais. Penser à modifier les deux.
+
+| Contenu | Français | Anglais |
+|---|---|---|
+| Bio courte (accueil) | `content/_index.md` | `content/_index.en.md` |
+| Bio longue, fonctions, parcours, conférences | `content/bio.md` | `content/bio.en.md` |
+| Enseignement et encadrement | `content/enseignement.md` | `content/enseignement.en.md` |
+| Mentions légales | `content/mentions-legales.md` | `content/mentions-legales.en.md` |
+
+| Autres réglages | Fichier |
 |---|---|
-| Bio courte (accueil) | `content/_index.md` |
-| Bio longue, fonctions, parcours, conférences | `content/bio.md` |
-| Enseignement et encadrement | `content/enseignement.md` |
-| Mentions légales | `content/mentions-legales.md` |
-| Nom, fonction, intérêts, formation, contact, liens (icônes) | `data/profil.yaml` |
-| Menu, description du site, publications mises en avant | `hugo.toml` |
+| Nom, fonction, intérêts, formation (blocs `fr` et `en`), contact, liens (icônes) | `data/profil.yaml` |
+| Menus des deux langues, descriptions, publications mises en avant | `hugo.toml` |
+| Petits libellés de l'interface (boutons, titres de rubriques) | `i18n/fr.yaml`, `i18n/en.yaml` |
 
 Sur GitHub : ouvrir le fichier, cliquer sur le crayon (**Edit**), modifier, **Commit changes**.
 
