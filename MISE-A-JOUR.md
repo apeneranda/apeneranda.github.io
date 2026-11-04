@@ -57,7 +57,7 @@ Règles lues dans le `.bib` :
 
 Sur GitHub : ouvrir le fichier, cliquer sur le crayon (**Edit**), modifier, **Commit changes**.
 
-### Ajouter un lien (ORCID, LinkedIn, idHAL…)
+### Ajouter un lien (ORCID, idHAL…)
 
 Dans `data/profil.yaml`, sous `liens`, ajouter par exemple :
 
@@ -67,13 +67,13 @@ Dans `data/profil.yaml`, sous `liens`, ajouter par exemple :
     url: https://orcid.org/0000-0000-0000-0000
 ```
 
-Icônes disponibles : `email`, `scholar`, `hal`, `cairn`, `github`, `web` (toute autre
+Icônes disponibles : `email`, `scholar`, `hal`, `cairn`, `linkedin`, `github`, `web` (toute autre
 valeur affiche l'icône générique `web`).
 
-## Ajouter la photo
+## Changer la photo
 
-Déposer un portrait carré (600 × 600 px minimum) sous le nom exact
-`assets/img/avatar.jpg`. Il remplace automatiquement le monogramme « AP » de l'accueil.
+Remplacer `assets/img/avatar.jpg` par un portrait **carré** (600 × 600 px minimum),
+visage centré, sous le même nom.
 
 ## Prévisualiser en local (facultatif)
 

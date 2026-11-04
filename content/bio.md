@@ -9,7 +9,7 @@ Diplômé de l'IESEG School of Management (spécialité management des systèmes
 Ses travaux portent sur trois terrains liés :
 - **le management public et les systèmes d'information** : gouvernance des données publiques, systèmes d'aide à la décision des collectivités, transformation numérique des administrations ;
 - **les communs** : gouvernance des biens communs de la connaissance et action collective, dans le sillage d'Elinor Ostrom ;
-- **la philosophie des sciences de gestion** : l'agir moral et le management chez Aristote, la *vita activa* de Hannah Arendt, l'œuvre de Marcel De Corte et la critique de la technocratie.
+- **la philosophie des sciences de gestion** : l'agir moral et le management chez Aristote, la *vita activa* de Hannah Arendt, l'œuvre de Marcel De Corte.
 
 Il a publié notamment dans *Systèmes d'information et management*, la *Revue des sciences de gestion*, *Développement durable et territoires* et la *Revue thomiste*. Il a codirigé *Fonction(s) publique(s) : le défi du changement* (Presses de l'EHESP, 2018) et dirige la collection Marcel De Corte aux éditions Hora Decima ; il siège au conseil scientifique de la collection Critères chez le même éditeur.
 

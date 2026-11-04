@@ -38,7 +38,7 @@ contact:
     - France
   carte: https://www.openstreetmap.org/search?query=21%20all%C3%A9e%20de%20Brienne%2C%20Toulouse
 
-# icone : email, scholar, hal, cairn, github, orcid, linkedin, web
+# icone : email, scholar, hal, cairn, linkedin, github, web
 liens:
   - icone: email
     libelle: E-mail
@@ -49,6 +49,9 @@ liens:
   - icone: hal
     libelle: CV HAL
     url: https://cv.hal.science/adrien-peneranda
+  - icone: linkedin
+    libelle: LinkedIn
+    url: https://www.linkedin.com/in/adrien-peneranda-509536136/
   - icone: cairn
     libelle: Cairn
     url: https://shs.cairn.info/publications-de-adrien-peneranda--138972
