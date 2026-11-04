@@ -1,5 +1,5 @@
 biographie: Biographie
-interets: Centres d'intérêt
+interets: Thèmes de recherche
 formation: Formation
 portrait: Portrait de
 cv_pdf: CV (PDF)
@@ -48,3 +48,7 @@ recherche_plusieurs: "%d résultats"
 recherche_erreur: "La recherche est indisponible pour le moment."
 recherche_pub: "Publication"
 recherche_page: "Page"
+# Accueil
+domaines: Domaines
+cv_fr: CV en français
+cv_en: CV en anglais

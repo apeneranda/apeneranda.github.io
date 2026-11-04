@@ -70,47 +70,54 @@ h1, h2, h3 { font-family: var(--sans); font-weight: 600; line-height: 1.25; }
 
 main { min-height: 70vh; }
 
-/* Accueil : profil + biographie */
-.about { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; padding-top: 64px; padding-bottom: 64px; }
-.profile { text-align: center; }
-.avatar {
-  width: 270px; height: 270px; max-width: 100%; border-radius: 50%;
-  object-fit: cover; display: block; margin: 0 auto 20px;
+/* Accueil (inspiré de la présentation de tdeguilhem.com) */
+.home { max-width: 980px; padding-top: 56px; padding-bottom: 64px; }
+.home-head { display: grid; grid-template-columns: 1fr 240px; gap: 48px; align-items: start; }
+.home-name { font-size: 2.2rem; margin: 0 0 14px; }
+.home-lines { margin: 0 0 22px; font-size: 1.08rem; line-height: 1.7; }
+.home-lines strong { font-weight: 600; }
+.home-office { margin: 0 0 22px; line-height: 1.6; color: var(--text); }
+.home-links { margin: 0 0 26px; line-height: 1.9; }
+/* Listes séparées par « | » : le séparateur reste collé à l'élément suivant */
+/* Listes séparées par un trait vertical ; le trait en début de ligne est masqué
+   (overflow: hidden + décalage d'un pixel), même quand la liste passe à la ligne. */
+.pipes { display: flex; flex-wrap: wrap; overflow: hidden; margin-left: -12px; row-gap: 6px; }
+.pipes > span {
+  white-space: nowrap; line-height: 1.25; padding: 0 11px;
+  border-left: 1px solid var(--muted); margin-left: -1px;
 }
-.avatar-initiales {
-  display: flex; align-items: center; justify-content: center;
-  background: var(--primary-soft); color: var(--primary);
-  font-family: var(--serif); font-size: 5rem; letter-spacing: .04em;
+@media (max-width: 760px) { .home-areas.pipes > span { white-space: normal; } }
+.home-photo img {
+  display: block; width: 240px; height: 300px; object-fit: cover;
+  border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 0 0 1px var(--border);
 }
-.profile-name { font-size: 2rem; margin: 0 0 6px; }
-.profile-role { font-size: 1.1rem; margin: 0 0 6px; color: var(--text); }
-.profile-org { margin: 0; }
-.profile-org a { color: var(--muted); }
-.profile-org a:hover { color: var(--primary); }
-.social { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 2px; }
-.social a { display: inline-flex; width: 33px; height: 33px; align-items: center; justify-content: center; border-radius: 50%; color: var(--primary); }
-.social a:hover { background: var(--primary-soft); }
-.social svg { width: 22px; height: 22px; }
-.contact-icon svg { width: 24px; height: 24px; }
+.cv-downloads { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 14px 40px; }
+.cv-downloads a { display: flex; align-items: center; gap: 12px; color: var(--text); text-decoration: none; }
+.cv-downloads .icon-pdf { width: 30px; height: 38px; flex: none; }
+.cv-text { display: flex; flex-direction: column; line-height: 1.3; }
+.cv-name { font-size: .85rem; color: var(--muted); }
+.cv-action { color: var(--muted); }
+.cv-dl { font-weight: 600; color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+.cv-size { font-size: .92rem; }
+.cv-downloads a:hover .cv-dl { text-decoration-thickness: 2px; }
 
-.about-text h2 { font-size: 2rem; margin-top: 0; }
-.about-text p { margin: 0 0 1em; }
-.about-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 24px; }
-.about-cols h3 { font-size: 1.25rem; margin: 0 0 10px; }
-.ul-interests, .ul-edu { list-style: none; padding: 0; margin: 0; }
-.ul-interests li { padding-left: 1.4em; position: relative; margin-bottom: 4px; }
-.ul-interests li::before { content: "▸"; position: absolute; left: 0; color: var(--primary); }
-.ul-edu li { padding-left: 1.4em; position: relative; margin-bottom: 12px; }
-.ul-edu li::before { content: "🎓"; position: absolute; left: -2px; font-size: .9em; }
-.ul-edu p { margin: 0; }
-.ul-edu .course { font-weight: 500; }
-.ul-edu .institution { color: var(--muted); font-size: .95rem; }
+.home-body { margin-top: 48px; border-top: 1px solid var(--border); padding-top: 8px; }
+.home-h {
+  font-size: .95rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+  margin: 32px 0 12px; color: var(--text);
+}
+.home-bio p { margin: 0 0 1em; }
+.home-areas { margin: 0 0 0 -12px; }
+.home-edu { margin: 0; padding-left: 1.2em; }
+.home-edu li { margin-bottom: 6px; }
+.home-edu strong { font-weight: 600; }
 
-@media (max-width: 860px) {
-  .about { grid-template-columns: 1fr; gap: 32px; padding-top: 40px; }
-  .about-cols { grid-template-columns: 1fr; }
-  .avatar { width: 200px; height: 200px; }
-  .avatar-initiales { font-size: 4rem; }
+@media (max-width: 760px) {
+  .home { padding-top: 32px; }
+  .home-head { grid-template-columns: 1fr; gap: 24px; }
+  .home-photo { order: -1; }
+  .home-photo img { width: 160px; height: 200px; }
+  .home-name { font-size: 1.9rem; }
 }
 
 /* Pages de contenu */

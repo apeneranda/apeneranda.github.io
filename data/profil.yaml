@@ -4,14 +4,15 @@
 
 nom: Adrien Peneranda
 
-organisations:
-  - nom: Sciences Po Toulouse
-    url: https://www.sciencespo-toulouse.fr/
-  - nom: LEREPS (EA 4212)
-    url: https://lereps.sciencespo-toulouse.fr/
-
 fr:
   titre: Maître de conférences en sciences de gestion
+  # Lignes sous la fonction (accueil) : prefixe facultatif, texte, lien facultatif
+  affiliations:
+    - texte: Sciences Po Toulouse
+      url: https://www.sciencespo-toulouse.fr/
+    - prefixe: "Laboratoire : "
+      texte: LEREPS EA 4212
+      url: https://lereps.sciencespo-toulouse.fr/
   bureau: Bureau MD 421
   centres_d_interet:
     - Management public
@@ -31,7 +32,13 @@ fr:
       annee: 2009
 
 en:
-  titre: Associate Professor of Management
+  titre: Associate Professor of Management (MCF)
+  affiliations:
+    - texte: Sciences Po Toulouse
+      url: https://www.sciencespo-toulouse.fr/
+    - prefixe: "Research Fellow: "
+      texte: LEREPS EA 4212
+      url: https://lereps.sciencespo-toulouse.fr/
   bureau: Office MD 421
   centres_d_interet:
     - Public management

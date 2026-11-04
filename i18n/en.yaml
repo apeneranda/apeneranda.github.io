@@ -1,5 +1,5 @@
 biographie: Biography
-interets: Interests
+interets: Research interests
 formation: Education
 portrait: Portrait of
 cv_pdf: CV (PDF)
@@ -46,3 +46,7 @@ recherche_plusieurs: "%d results"
 recherche_erreur: "Search is unavailable at the moment."
 recherche_pub: "Publication"
 recherche_page: "Page"
+# Home
+domaines: Areas
+cv_fr: CV in French
+cv_en: CV in English

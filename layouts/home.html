@@ -2,50 +2,71 @@
 {{ $p := hugo.Data.profil }}
 {{ $lang := site.Language.Lang }}
 {{ $t := index $p $lang }}
-<section class="container about">
-  <div class="profile">
-    {{ with resources.Get "img/avatar.jpg" }}
-      {{ $img := .Fill "540x540 Center q90" }}
-      <img class="avatar" src="{{ $img.RelPermalink }}" width="270" height="270" alt="{{ i18n "portrait" }} {{ $p.nom }}">
-    {{ else }}
-      <div class="avatar avatar-initiales" aria-hidden="true">AP</div>
-    {{ end }}
-    <h1 class="profile-name">{{ $p.nom }}</h1>
-    <p class="profile-role">{{ $t.titre }}</p>
-    {{ range $p.organisations }}
-    <p class="profile-org"><a href="{{ .url }}">{{ .nom }}</a></p>
-    {{ end }}
-    <ul class="social">
-      {{ range $p.liens }}
-      {{ $label := cond (and (eq $lang "en") .libelle_en) .libelle_en .libelle }}
-      <li><a href="{{ .url }}" title="{{ $label }}" aria-label="{{ $label }}">{{ partial "icone.html" .icone }}</a></li>
+{{ $c := $p.contact }}
+<section class="container home">
+  <div class="home-head">
+    <div class="home-id">
+      <h1 class="home-name">{{ $p.nom }}</h1>
+      <p class="home-lines">
+        <strong>{{ $t.titre }}</strong><br>
+        {{ range $t.affiliations -}}
+        {{ with .prefixe }}<strong>{{ . }}</strong>{{ end }}{{ if .url }}<a href="{{ .url }}">{{ .texte }}</a>{{ else }}{{ .texte }}{{ end }}<br>
+        {{ end }}
+      </p>
+
+      <p class="home-office">
+        {{ $t.bureau }}<br>
+        {{ range $c.adresse }}{{ . }}<br>{{ end }}
+        <a href="mailto:{{ $c.email }}">{{ $c.email }}</a>
+      </p>
+
+      <p class="home-links pipes">
+        {{- range $p.liens }}{{ if ne .icone "email" }}
+        {{- $label := cond (and (eq $lang "en") .libelle_en) .libelle_en .libelle }}
+        <span><a href="{{ .url }}">{{ $label }}</a></span>
+        {{- end }}{{ end }}
+      </p>
+
+      {{ $cvs := slice (dict "url" "/files/cv-en.pdf" "lang" "en") (dict "url" "/files/cv.pdf" "lang" "fr") }}
+      {{ if eq $lang "fr" }}{{ $cvs = slice (index $cvs 1) (index $cvs 0) }}{{ end }}
+      <ul class="cv-downloads">
+        {{ range $cvs }}
+        {{ $size := "" }}
+        {{ with os.Stat (printf "static%s" .url) }}{{ $size = printf "%.0f" (div (float .Size) 1024) }}{{ end }}
+        <li>
+          <a href="{{ .url }}" download hreflang="{{ .lang }}">
+            {{ partial "icone.html" "pdf" }}
+            <span class="cv-text">
+              <span class="cv-name">{{ i18n (printf "cv_%s" .lang) }}</span>
+              <span class="cv-action"><span class="cv-dl">{{ i18n "telecharger" }}</span>{{ with $size }} <span class="cv-size">(PDF, {{ . }} {{ if eq $lang "fr" }}Ko{{ else }}KB{{ end }})</span>{{ end }}</span>
+            </span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="home-photo">
+      {{ with resources.Get "img/portrait.jpg" }}
+        {{ $img := .Resize "480x q88" }}
+        <img src="{{ $img.RelPermalink }}" width="240" height="300" alt="{{ i18n "portrait" }} {{ $p.nom }}">
       {{ end }}
-      <li><a href="{{ site.Params.cv }}" title="{{ i18n "cv_pdf" }}" aria-label="{{ i18n "cv_pdf" }}">{{ partial "icone.html" "cv" }}</a></li>
-    </ul>
+    </div>
   </div>
 
-  <div class="about-text">
-    <h2>{{ i18n "biographie" }}</h2>
-    {{ .Content }}
-    <div class="about-cols">
-      <div>
-        <h3>{{ i18n "interets" }}</h3>
-        <ul class="ul-interests">
-          {{ range $t.centres_d_interet }}<li>{{ . }}</li>{{ end }}
-        </ul>
-      </div>
-      <div>
-        <h3>{{ i18n "formation" }}</h3>
-        <ul class="ul-edu">
-          {{ range $t.formation }}
-          <li>
-            <p class="course">{{ .diplome }}, {{ .annee }}</p>
-            <p class="institution">{{ .etablissement }}</p>
-          </li>
-          {{ end }}
-        </ul>
-      </div>
-    </div>
+  <div class="home-body">
+    <h2 class="home-h">{{ i18n "biographie" }}</h2>
+    <div class="home-bio">{{ .Content }}</div>
+
+    <h2 class="home-h">{{ i18n "domaines" }}</h2>
+    <p class="home-areas pipes">{{ range $t.centres_d_interet }}<span>{{ . }}</span>{{ end }}</p>
+
+    <h2 class="home-h">{{ i18n "formation" }}</h2>
+    <ul class="home-edu">
+      {{ range $t.formation }}
+      <li><strong>{{ .diplome }}</strong>, {{ .etablissement }} ({{ .annee }})</li>
+      {{ end }}
+    </ul>
   </div>
 </section>
 {{ end }}

@@ -77,7 +77,7 @@ droite du menu, mène à la même page dans l'autre langue. Chaque page a deux f
 
 | Autres réglages | Fichier |
 |---|---|
-| Nom, fonction, intérêts, formation (blocs `fr` et `en`), contact, liens (icônes) | `data/profil.yaml` |
+| Accueil : nom, fonction, lignes « Research Fellow / Laboratoire », domaines, formation (blocs `fr` et `en`), coordonnées, liens | `data/profil.yaml` |
 | Menus des deux langues, descriptions, publications mises en avant | `hugo.toml` |
 | Petits libellés de l'interface (boutons, titres de rubriques) | `i18n/fr.yaml`, `i18n/en.yaml` |
 
@@ -98,8 +98,8 @@ valeur affiche l'icône générique `web`).
 
 ## Changer la photo
 
-Remplacer `assets/img/avatar.jpg` par un portrait **carré** (600 × 600 px minimum),
-visage centré, sous le même nom.
+Remplacer `assets/img/portrait.jpg` par un portrait **vertical au format 4:5**
+(par exemple 640 × 800 px), visage dans le tiers supérieur, sous le même nom.
 
 ## Prévisualiser en local (facultatif)
 
