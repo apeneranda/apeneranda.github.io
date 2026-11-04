@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{ $libelles := dict
+  "article" "Article dans une revue à comité de lecture"
+  "livre" "Ouvrage"
+  "chapitre" "Chapitre d'ouvrage"
+  "communication" "Communication"
+  "rapport" "Cahier de recherche"
+  "autre" "Autre article ou diffusion"
+}}
+{{ $key := .Params.key }}
+<article class="container page pub-page">
+  <p class="pub-kicker"><a href="{{ "/publications/" | relURL }}">Publications</a> · {{ index $libelles .Params.type_pub }}</p>
+  <h1>{{ .Params.titre_html | safeHTML }}</h1>
+  <p class="pub-authors">{{ .Params.auteurs | safeHTML }}</p>
+  <dl class="pub-meta">
+    <dt>Année</dt><dd>{{ .Date.Year }}</dd>
+    {{ with .Params.lieu }}<dt>Publié dans</dt><dd>{{ . }}</dd>{{ end }}
+    <dt>Référence</dt><dd>{{ .Params.citation | safeHTML }}</dd>
+  </dl>
+  <p class="pub-links">
+    {{ with .Params.hal }}<a class="btn btn-primary" href="{{ . }}">Voir sur HAL</a>{{ end }}
+    {{ with .Resources.GetMatch "cite.bib" }}<button type="button" class="btn js-cite" data-bib="{{ .RelPermalink }}" data-file="{{ $key }}.bib">Citer</button>{{ end }}
+  </p>
+</article>
+{{ end }}
+{{ define "scripts" }}{{ partial "cite-dialog.html" . }}{{ end }}

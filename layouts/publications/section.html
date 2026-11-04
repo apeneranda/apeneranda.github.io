@@ -1,0 +1,60 @@
+{{ define "main" }}
+{{ $types := slice
+  (dict "id" "article" "titre" "Articles dans des revues à comité de lecture")
+  (dict "id" "livre" "titre" "Ouvrages, directions de collection et numéros thématiques")
+  (dict "id" "chapitre" "titre" "Chapitres d'ouvrages")
+  (dict "id" "communication" "titre" "Communications")
+  (dict "id" "rapport" "titre" "Cahiers de recherche")
+  (dict "id" "autre" "titre" "Autres articles et diffusion")
+}}
+{{ $pubs := .RegularPages.ByDate.Reverse }}
+<article class="container page">
+  <h1>{{ .Title }}</h1>
+
+  {{ $featured := slice }}
+  {{ range site.Params.featured }}
+    {{ $k := . }}
+    {{ range where $pubs "Params.key" $k }}{{ $featured = $featured | append . }}{{ end }}
+  {{ end }}
+  {{ with $featured }}
+  <section class="pub-featured">
+    <h2>Publications choisies</h2>
+    <div class="featured-grid">
+      {{ range . }}
+      {{ $key := .Params.key }}
+      <div class="featured-card">
+        <p class="featured-meta">{{ .Date.Year }} · {{ .Params.lieu }}</p>
+        <h3><a href="{{ .RelPermalink }}">{{ .Params.titre_html | safeHTML }}</a></h3>
+        <p class="featured-authors">{{ .Params.auteurs | safeHTML }}</p>
+        <p class="pub-links">
+          {{ with .Params.hal }}<a class="btn" href="{{ . }}">HAL</a>{{ end }}
+          {{ with .Resources.GetMatch "cite.bib" }}<button type="button" class="btn js-cite" data-bib="{{ .RelPermalink }}" data-file="{{ $key }}.bib">Citer</button>{{ end }}
+        </p>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <h2>Toutes les publications ({{ len $pubs }})</h2>
+  <nav class="pub-toc" aria-label="Rubriques">
+    {{ range $types }}
+      {{ $n := len (where $pubs "Params.type_pub" .id) }}
+      {{ if $n }}<a href="#{{ .id }}">{{ .titre }} <span class="count">{{ $n }}</span></a>{{ end }}
+    {{ end }}
+  </nav>
+
+  {{ range $types }}
+    {{ $t := . }}
+    {{ with where $pubs "Params.type_pub" $t.id }}
+    <section class="pub-group" id="{{ $t.id }}">
+      <h3>{{ $t.titre }}</h3>
+      <ul class="pub-list">
+        {{ range . }}{{ partial "publication.html" . }}{{ end }}
+      </ul>
+    </section>
+    {{ end }}
+  {{ end }}
+</article>
+{{ end }}
+{{ define "scripts" }}{{ partial "cite-dialog.html" . }}{{ end }}

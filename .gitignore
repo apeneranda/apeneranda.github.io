@@ -1,0 +1,5 @@
+public/
+resources/
+.hugo_build.lock
+# Pages générées à partir de publications.bib par scripts/import_publications.py
+content/publications/*/

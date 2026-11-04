@@ -1,0 +1,37 @@
+<dialog id="cite-dialog" class="cite-dialog" aria-labelledby="cite-title">
+  <div class="cite-head">
+    <h2 id="cite-title">Citer</h2>
+    <button type="button" class="cite-close" aria-label="Fermer">×</button>
+  </div>
+  <pre id="cite-text"></pre>
+  <div class="cite-actions">
+    <button type="button" class="btn" id="cite-copy">Copier</button>
+    <a class="btn" id="cite-download" href="#" download>Télécharger</a>
+  </div>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('cite-dialog');
+  if (!dlg) return;
+  var pre = document.getElementById('cite-text');
+  var dl = document.getElementById('cite-download');
+  var copy = document.getElementById('cite-copy');
+  document.querySelectorAll('.js-cite').forEach(function (b) {
+    b.addEventListener('click', function () {
+      dl.href = b.dataset.bib;
+      dl.setAttribute('download', b.dataset.file);
+      pre.textContent = 'Chargement…';
+      copy.textContent = 'Copier';
+      dlg.showModal();
+      fetch(b.dataset.bib).then(function (r) { return r.text(); })
+        .then(function (t) { pre.textContent = t; })
+        .catch(function () { pre.textContent = 'Référence indisponible.'; });
+    });
+  });
+  copy.addEventListener('click', function () {
+    navigator.clipboard.writeText(pre.textContent).then(function () { copy.textContent = 'Copié'; });
+  });
+  dlg.querySelector('.cite-close').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+})();
+</script>

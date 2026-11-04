@@ -1,0 +1,60 @@
+# Identité et coordonnées affichées sur le site (accueil, contact, pied de page).
+# Pour ajouter un lien (ORCID, LinkedIn…), ajoutez une ligne dans « liens ».
+
+nom: Adrien Peneranda
+titre: Maître de conférences en sciences de gestion
+
+organisations:
+  - nom: Sciences Po Toulouse
+    url: https://www.sciencespo-toulouse.fr/
+  - nom: LEREPS (EA 4212)
+    url: https://lereps.sciencespo-toulouse.fr/
+
+centres_d_interet:
+  - Management public
+  - Management des systèmes d'information
+  - Philosophie des sciences de gestion
+  - Éthique et complexité
+  - Biens communs de la connaissance
+
+formation:
+  - diplome: Doctorat en sciences de gestion
+    etablissement: Aix-Marseille Université
+    annee: 2014
+  - diplome: Master recherche en sciences de gestion (major de promotion)
+    etablissement: IMPGT, Aix-Marseille Université
+    annee: 2010
+  - diplome: Programme Grande École, spécialité management des systèmes d'information
+    etablissement: IESEG School of Management
+    annee: 2009
+
+contact:
+  email: adrien.peneranda@sciencespo-toulouse.fr
+  bureau: Bureau MD 421
+  adresse:
+    - Sciences Po Toulouse — Manufacture des Tabacs
+    - 21 allée de Brienne
+    - 31015 Toulouse
+    - France
+  carte: https://www.openstreetmap.org/search?query=21%20all%C3%A9e%20de%20Brienne%2C%20Toulouse
+
+# icone : email, scholar, hal, cairn, github, orcid, linkedin, web
+liens:
+  - icone: email
+    libelle: E-mail
+    url: mailto:adrien.peneranda@sciencespo-toulouse.fr
+  - icone: scholar
+    libelle: Google Scholar
+    url: https://scholar.google.fr/citations?user=GSLADx0AAAAJ
+  - icone: hal
+    libelle: CV HAL
+    url: https://cv.hal.science/adrien-peneranda
+  - icone: cairn
+    libelle: Cairn
+    url: https://shs.cairn.info/publications-de-adrien-peneranda--138972
+  - icone: web
+    libelle: Page LEREPS
+    url: https://lereps.sciencespo-toulouse.fr/peneranda-adrien-645
+  - icone: github
+    libelle: GitHub
+    url: https://github.com/apeneranda

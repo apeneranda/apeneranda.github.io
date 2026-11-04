@@ -1,0 +1,53 @@
+baseURL = "https://apeneranda.github.io/"
+locale = "fr-FR"
+defaultContentLanguage = "fr"
+title = "Adrien Peneranda"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+  description = "Adrien Peneranda, maître de conférences en sciences de gestion à Sciences Po Toulouse (LEREPS) : management public, systèmes d'information, philosophie des sciences de gestion."
+  # Clés BibTeX des publications mises en avant en tête de la page Publications
+  featured = ["peneranda2025marcel", "amabile2018management", "peneranda2017aristote"]
+
+[menus]
+  [[menus.main]]
+    name = "Bio"
+    pageRef = "/bio"
+    weight = 10
+  [[menus.main]]
+    name = "Publications"
+    pageRef = "/publications"
+    weight = 20
+  [[menus.main]]
+    name = "Enseignement"
+    pageRef = "/enseignement"
+    weight = 30
+  [[menus.main]]
+    name = "CV"
+    url = "/files/cv.pdf"
+    weight = 40
+  [[menus.main]]
+    name = "Contact"
+    pageRef = "/contact"
+    weight = 50
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.goldmark.extensions.typographer]
+  disable = true
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.x]
+    disable = true
+  [privacy.youtube]
+    disable = true

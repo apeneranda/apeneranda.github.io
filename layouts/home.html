@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{ $p := hugo.Data.profil }}
+<section class="container about">
+  <div class="profile">
+    {{ with resources.Get "img/avatar.jpg" }}
+      {{ $img := .Fill "540x540 Center q90" }}
+      <img class="avatar" src="{{ $img.RelPermalink }}" width="270" height="270" alt="Portrait de {{ $p.nom }}">
+    {{ else }}
+      <div class="avatar avatar-initiales" aria-hidden="true">AP</div>
+    {{ end }}
+    <h1 class="profile-name">{{ $p.nom }}</h1>
+    <p class="profile-role">{{ $p.titre }}</p>
+    {{ range $p.organisations }}
+    <p class="profile-org"><a href="{{ .url }}">{{ .nom }}</a></p>
+    {{ end }}
+    <ul class="social">
+      {{ range $p.liens }}
+      <li><a href="{{ .url }}" title="{{ .libelle }}" aria-label="{{ .libelle }}">{{ partial "icone.html" .icone }}</a></li>
+      {{ end }}
+      <li><a href="{{ "/files/cv.pdf" | relURL }}" title="CV (PDF)" aria-label="CV (PDF)">{{ partial "icone.html" "cv" }}</a></li>
+    </ul>
+  </div>
+
+  <div class="about-text">
+    <h2>Biographie</h2>
+    {{ .Content }}
+    <div class="about-cols">
+      <div>
+        <h3>Centres d'intérêt</h3>
+        <ul class="ul-interests">
+          {{ range $p.centres_d_interet }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      <div>
+        <h3>Formation</h3>
+        <ul class="ul-edu">
+          {{ range $p.formation }}
+          <li>
+            <p class="course">{{ .diplome }}, {{ .annee }}</p>
+            <p class="institution">{{ .etablissement }}</p>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

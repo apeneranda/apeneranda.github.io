@@ -1,0 +1,10 @@
+{{- /* Une référence dans une liste : citation + boutons. Contexte : la page de la publication. */ -}}
+{{- $key := .Params.key -}}
+<li class="pub" id="{{ $key }}">
+  <p class="pub-cite">{{ .Params.citation | safeHTML }}</p>
+  <p class="pub-links">
+    <a class="btn" href="{{ .RelPermalink }}">Notice</a>
+    {{ with .Params.hal }}<a class="btn" href="{{ . }}">HAL</a>{{ end }}
+    {{ with .Resources.GetMatch "cite.bib" }}<button type="button" class="btn js-cite" data-bib="{{ .RelPermalink }}" data-file="{{ $key }}.bib">Citer</button>{{ end }}
+  </p>
+</li>
