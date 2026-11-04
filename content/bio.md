@@ -2,16 +2,16 @@
 title: Bio
 ---
 
-Adrien Peneranda est maître de conférences en sciences de gestion (section CNU 06) à Sciences Po Toulouse depuis 2015 et membre du Laboratoire d'étude et de recherche sur l'économie, les politiques et les systèmes sociaux (LEREPS, EA 4212).
+Adrien Peneranda est maître de conférences en sciences de gestion (section CNU 06) à [Sciences Po Toulouse](https://www.sciencespo-toulouse.fr/) depuis 2015 et membre du [Laboratoire d'étude et de recherche sur l'économie, les politiques et les systèmes sociaux](https://lereps.sciencespo-toulouse.fr/) (LEREPS, EA 4212).
 
-Diplômé de l'IESEG School of Management (spécialité management des systèmes d'information), auditeur de la 65e session de l'Institut des hautes études de défense nationale, il obtient en 2010 le master recherche en sciences de gestion de l'IMPGT (Aix-Marseille Université), dont il sort major. Sa thèse de doctorat, *Biens communs et management public du patrimoine culturel à l'ère numérique*, dirigée par Serge Amabile et soutenue en 2014 à Aix-Marseille Université, reçoit le prix de thèse de l'IMPGT. Il est ensuite attaché temporaire d'enseignement et de recherche à l'IMPGT, puis à l'ESM-IAE de Metz (Université de Lorraine).
+Diplômé de l'[IESEG School of Management](https://www.ieseg.fr/) (spécialité management des systèmes d'information), auditeur de la 65e session de l'[Institut des hautes études de défense nationale](https://ihedn.fr/), il obtient en 2010 le master recherche en sciences de gestion de l'[IMPGT](https://impgt.univ-amu.fr/) ([Aix-Marseille Université](https://www.univ-amu.fr/)), dont il sort major. Sa thèse de doctorat, *Biens communs et management public du patrimoine culturel à l'ère numérique*, dirigée par Serge Amabile et soutenue en 2014 à Aix-Marseille Université, reçoit le prix de thèse de l'IMPGT. Il est ensuite attaché temporaire d'enseignement et de recherche à l'IMPGT, puis à l'[ESM-IAE de Metz](https://iaemetz.univ-lorraine.fr/) ([Université de Lorraine](https://www.univ-lorraine.fr/)).
 
 Ses travaux portent sur trois terrains liés :
 - **le management public et les systèmes d'information** : gouvernance des données publiques, systèmes d'aide à la décision des collectivités, transformation numérique des administrations ;
 - **les communs** : gouvernance des biens communs de la connaissance et action collective, dans le sillage d'Elinor Ostrom ;
 - **la philosophie des sciences de gestion** : l'agir moral et le management chez Aristote, la *vita activa* de Hannah Arendt, l'œuvre de Marcel De Corte.
 
-Il a publié notamment dans *Systèmes d'information et management*, la *Revue des sciences de gestion*, *Développement durable et territoires* et la *Revue thomiste*. Il a codirigé *Fonction(s) publique(s) : le défi du changement* (Presses de l'EHESP, 2018) et dirige la collection Marcel De Corte aux éditions Hora Decima ; il siège au conseil scientifique de la collection Critères chez le même éditeur.
+Il a publié notamment dans *Systèmes d'information et management*, la *Revue des sciences de gestion*, *Développement durable et territoires* et la *Revue thomiste*. Il a codirigé *Fonction(s) publique(s) : le défi du changement* ([Presses de l'EHESP](https://www.presses.ehesp.fr/), 2018) et dirige la collection Marcel De Corte aux éditions Hora Decima ; il siège au conseil scientifique de la collection Critères chez le même éditeur.
 
 À Sciences Po Toulouse, il a été directeur du développement de la formation continue et de la stratégie numérique (2016-2019), chargé de mission stages et insertion professionnelle (2020-2021), puis directeur adjoint chargé des formations (2021-2026). Il est membre élu du conseil d'administration de l'établissement. Il enseigne la stratégie d'entreprise, le management international des ressources humaines, les systèmes d'information et la transformation numérique des organisations publiques.
 

@@ -57,7 +57,7 @@ Règles lues dans le `.bib` :
 
 Sur GitHub : ouvrir le fichier, cliquer sur le crayon (**Edit**), modifier, **Commit changes**.
 
-### Ajouter un lien (ORCID, idHAL…)
+### Ajouter un lien (idHAL…)
 
 Dans `data/profil.yaml`, sous `liens`, ajouter par exemple :
 
@@ -67,7 +67,7 @@ Dans `data/profil.yaml`, sous `liens`, ajouter par exemple :
     url: https://orcid.org/0000-0000-0000-0000
 ```
 
-Icônes disponibles : `email`, `scholar`, `hal`, `cairn`, `linkedin`, `github`, `web` (toute autre
+Icônes disponibles : `email`, `scholar`, `orcid`, `hal`, `cairn`, `linkedin`, `github`, `web` (toute autre
 valeur affiche l'icône générique `web`).
 
 ## Changer la photo

@@ -38,7 +38,7 @@ contact:
     - France
   carte: https://www.openstreetmap.org/search?query=21%20all%C3%A9e%20de%20Brienne%2C%20Toulouse
 
-# icone : email, scholar, hal, cairn, linkedin, github, web
+# icone : email, scholar, orcid, hal, cairn, linkedin, github, web
 liens:
   - icone: email
     libelle: E-mail
@@ -46,6 +46,9 @@ liens:
   - icone: scholar
     libelle: Google Scholar
     url: https://scholar.google.fr/citations?user=GSLADx0AAAAJ
+  - icone: orcid
+    libelle: ORCID
+    url: https://orcid.org/0000-0002-3210-3202
   - icone: hal
     libelle: CV HAL
     url: https://cv.hal.science/adrien-peneranda
