@@ -14,14 +14,14 @@ His research covers three related fields:
 
 He has published in *Systèmes d'information et management*, *La Revue des sciences de gestion*, *Développement durable et territoires* and the *Revue thomiste*, among others. He co-edited *Fonction(s) publique(s) : le défi du changement* [Public Service(s): The Challenge of Change] ([Presses de l'EHESP](https://www.presses.ehesp.fr/), 2018) and is the series editor of the Marcel De Corte collection at Hora Decima; he also sits on the scientific board of the Critères book series with the same publisher.
 
-At Sciences Po Toulouse, he served as Director of Continuing Education Development and Digital Strategy (2016–2019), Officer for internships and employability (2020–2021), and Deputy Director for Academic Programmes (2021–2026). He is an elected member of the institution's Board of Directors. He teaches business strategy, international human resource management, information systems and the digital transformation of public organisations.
+At Sciences Po Toulouse, he served as Director of Continuing Education Development and Digital Strategy (2016–2019), Officer for internships and employability (2020–2021), and Deputy Director for Academic Programmes (2021–2026). He is a member of the Governing Board of Sciences Po Toulouse. He teaches business strategy, international human resource management, information systems and the digital transformation of public organisations.
 
 ## Positions and Responsibilities
 
 ### Current positions
 
 - **Since 2015**: Associate Professor of Management, Sciences Po Toulouse · LEREPS (EA 4212)
-- **Since 2021**: Elected member of the Board of Directors of Sciences Po Toulouse (re-elected in 2024)
+- **Since 2021**: Member of the Governing Board, Sciences Po Toulouse (re-elected in 2024)
 - **Since 2022**: Series editor, Marcel De Corte collection, Hora Decima publishing
 - **Since 2024**: Member of the scientific board of the Critères book series, Hora Decima publishing
 
