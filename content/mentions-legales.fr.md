@@ -6,7 +6,7 @@ title: Mentions légales
 
 **Hébergement** : GitHub Pages — GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.
 
-**Données personnelles** : ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience. Il ne collecte aucune donnée personnelle.
+**Données personnelles** : ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience. Il ne collecte aucune donnée personnelle. Les vidéos de la page d'accueil sont hébergées par YouTube : elles ne sont chargées (en mode de confidentialité avancée, depuis `youtube-nocookie.com`) que si vous lancez la lecture ; YouTube peut alors traiter des données de navigation selon ses propres règles.
 
 **Contenus** : les textes de ce site sont la propriété de leur auteur. Les publications sont citées avec leurs références d'origine ; les versions en libre accès renvoient à l'archive ouverte HAL.
 

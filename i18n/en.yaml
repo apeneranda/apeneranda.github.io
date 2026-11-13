@@ -50,3 +50,7 @@ recherche_page: "Page"
 domaines: Areas
 cv_fr: CV in French
 cv_en: CV in English
+interventions: Recent talks
+video_lire: Play video
+video_note: Video hosted by YouTube, loaded only when you click.
+video_youtube: Watch on YouTube

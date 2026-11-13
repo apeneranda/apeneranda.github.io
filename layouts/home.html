@@ -67,6 +67,37 @@
       <li><strong>{{ .diplome }}</strong>, {{ .etablissement }} ({{ .annee }})</li>
       {{ end }}
     </ul>
+
+    {{ with .Params.interventions }}
+    <h2 class="home-h">{{ i18n "interventions" }}</h2>
+    {{ range . }}
+    {{ $watch := printf "https://www.youtube.com/watch?v=%s" .id }}
+    <figure class="home-video">
+      <h3 class="video-event">{{ .evenement }} <span class="video-where">{{ .lieu }} · {{ .date }}</span></h3>
+      {{/* Vignette locale : le lecteur YouTube n'est chargé qu'au clic (assets/js/video.js). */}}
+      <a class="video-frame" href="{{ $watch }}" data-embed="https://www.youtube-nocookie.com/embed/{{ .id }}?autoplay=1&rel=0" data-title="{{ .titre }}" aria-label="{{ i18n "video_lire" }} : {{ .titre }}">
+        {{ with resources.Get .vignette }}
+        {{ $img := .Fill "1280x720 q82" }}
+        <img src="{{ $img.RelPermalink }}" width="1280" height="720" alt="" loading="lazy">
+        {{ end }}
+        <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <figcaption>
+        <p class="video-title">{{ .titre }}</p>
+        <p>{{ .description | markdownify }}</p>
+        <p class="video-note">{{ i18n "video_note" }} <a href="{{ $watch }}">{{ i18n "video_youtube" }}</a></p>
+      </figcaption>
+    </figure>
+    {{ end }}
+    {{ end }}
   </div>
 </section>
+{{ end }}
+
+{{ define "scripts" }}
+{{ if .Params.interventions }}
+{{ with resources.Get "js/video.js" | minify | fingerprint }}
+<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+{{ end }}
+{{ end }}
 {{ end }}

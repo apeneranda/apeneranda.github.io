@@ -12,6 +12,7 @@
       {{- $edu := slice -}}
       {{- range $t.formation }}{{ $edu = $edu | append (printf "%s %s %v" .diplome .etablissement .annee) }}{{ end -}}
       {{- $text = printf "%s %s %s %s" $t.titre $text (delimit $t.centres_d_interet " ") (delimit $edu " ") -}}
+      {{- range .Params.interventions }}{{ $text = printf "%s %s %s %s %s %s" $text .evenement .lieu .date .titre (.description | plainify) }}{{ end -}}
     {{- else if $isPub -}}
       {{- $text = .Params.citation | plainify | htmlUnescape -}}
     {{- else if eq .Path "/contact" -}}
