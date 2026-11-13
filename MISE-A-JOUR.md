@@ -70,7 +70,7 @@ droite du menu, mène à la même page dans l'autre langue. Chaque page a deux f
 
 | Contenu | Anglais | Français |
 |---|---|---|
-| Bio courte et vidéo (accueil) | `content/_index.en.md` | `content/_index.fr.md` |
+| Bio courte et interventions récentes (accueil) | `content/_index.en.md` | `content/_index.fr.md` |
 | Bio longue, fonctions, parcours, conférences | `content/bio.en.md` | `content/bio.fr.md` |
 | Enseignement et encadrement | `content/enseignement.en.md` | `content/enseignement.fr.md` |
 | Mentions légales | `content/mentions-legales.en.md` | `content/mentions-legales.fr.md` |
@@ -96,17 +96,20 @@ Dans `data/profil.yaml`, sous `liens`, ajouter par exemple :
 Icônes disponibles : `email`, `scholar`, `orcid`, `hal`, `cairn`, `linkedin`, `github`, `web` (toute autre
 valeur affiche l'icône générique `web`).
 
-## Changer la vidéo de l'accueil
+## Interventions récentes (vidéos de l'accueil)
 
-La vidéo affichée sous la biographie est décrite par le bloc `video:` placé en tête de
-`content/_index.fr.md` et de `content/_index.en.md` (penser aux deux fichiers) :
+La rubrique « Interventions récentes », en bas de l'accueil, est décrite par la liste
+`interventions:` placée en tête de `content/_index.fr.md` et de `content/_index.en.md`
+(penser aux deux fichiers). Chaque entrée, introduite par un tiret, comprend :
 
+- `evenement`, `lieu`, `date` : le sous-titre affiché au-dessus de la vidéo ;
 - `id` : l'identifiant YouTube, c'est-à-dire ce qui suit `v=` dans l'adresse de la vidéo ;
 - `vignette` : l'image affichée avant la lecture, au format 16:9, déposée dans `assets/img/` ;
 - `titre` et `description` : le texte affiché sous la vidéo.
 
-Pour retirer la vidéo, supprimer le bloc `video:` dans les deux fichiers. Rien n'est chargé
-depuis YouTube tant que le visiteur ne clique pas sur la vignette.
+Pour ajouter une intervention, copier une entrée et la placer en premier ; pour retirer la
+rubrique, supprimer toute la liste dans les deux fichiers. Rien n'est chargé depuis YouTube
+tant que le visiteur ne clique pas sur une vignette.
 
 ## Changer la photo
 

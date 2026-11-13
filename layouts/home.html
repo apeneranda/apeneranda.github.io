@@ -58,10 +58,22 @@
     <h2 class="home-h">{{ i18n "biographie" }}</h2>
     <div class="home-bio">{{ .Content }}</div>
 
-    {{ with .Params.video }}
+    <h2 class="home-h">{{ i18n "domaines" }}</h2>
+    <p class="home-areas pipes">{{ range $t.centres_d_interet }}<span>{{ . }}</span>{{ end }}</p>
+
+    <h2 class="home-h">{{ i18n "formation" }}</h2>
+    <ul class="home-edu">
+      {{ range $t.formation }}
+      <li><strong>{{ .diplome }}</strong>, {{ .etablissement }} ({{ .annee }})</li>
+      {{ end }}
+    </ul>
+
+    {{ with .Params.interventions }}
+    <h2 class="home-h">{{ i18n "interventions" }}</h2>
+    {{ range . }}
     {{ $watch := printf "https://www.youtube.com/watch?v=%s" .id }}
-    <h2 class="home-h">{{ i18n "intervention" }}</h2>
     <figure class="home-video">
+      <h3 class="video-event">{{ .evenement }} <span class="video-where">{{ .lieu }} · {{ .date }}</span></h3>
       {{/* Vignette locale : le lecteur YouTube n'est chargé qu'au clic (assets/js/video.js). */}}
       <a class="video-frame" href="{{ $watch }}" data-embed="https://www.youtube-nocookie.com/embed/{{ .id }}?autoplay=1&rel=0" data-title="{{ .titre }}" aria-label="{{ i18n "video_lire" }} : {{ .titre }}">
         {{ with resources.Get .vignette }}
@@ -77,22 +89,13 @@
       </figcaption>
     </figure>
     {{ end }}
-
-    <h2 class="home-h">{{ i18n "domaines" }}</h2>
-    <p class="home-areas pipes">{{ range $t.centres_d_interet }}<span>{{ . }}</span>{{ end }}</p>
-
-    <h2 class="home-h">{{ i18n "formation" }}</h2>
-    <ul class="home-edu">
-      {{ range $t.formation }}
-      <li><strong>{{ .diplome }}</strong>, {{ .etablissement }} ({{ .annee }})</li>
-      {{ end }}
-    </ul>
+    {{ end }}
   </div>
 </section>
 {{ end }}
 
 {{ define "scripts" }}
-{{ if .Params.video }}
+{{ if .Params.interventions }}
 {{ with resources.Get "js/video.js" | minify | fingerprint }}
 <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
 {{ end }}

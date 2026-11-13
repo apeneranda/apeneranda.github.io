@@ -109,6 +109,9 @@ main { min-height: 70vh; }
 .home-bio p { margin: 0 0 1em; }
 /* Vidéo : vignette locale, lecteur YouTube chargé au clic */
 .home-video { margin: 0; max-width: 720px; }
+.home-video + .home-video { margin-top: 36px; }
+.video-event { font-size: 1.0625rem; font-weight: 600; line-height: 1.45; margin: 0 0 12px; }
+.video-where { display: block; font-weight: 400; color: var(--muted); }
 .video-frame {
   position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden;
   border-radius: 6px; background: #000; box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 0 0 1px var(--border);

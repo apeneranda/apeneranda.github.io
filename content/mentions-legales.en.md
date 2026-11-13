@@ -8,7 +8,7 @@ slug: legal-notice
 
 **Hosting**: GitHub Pages — GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, United States.
 
-**Personal data**: this site sets no cookies and uses no audience measurement tool. It collects no personal data. The video on the home page is hosted by YouTube: it is loaded (in privacy-enhanced mode, from `youtube-nocookie.com`) only if you start playback; YouTube may then process browsing data under its own policies.
+**Personal data**: this site sets no cookies and uses no audience measurement tool. It collects no personal data. The videos on the home page are hosted by YouTube: they are loaded (in privacy-enhanced mode, from `youtube-nocookie.com`) only if you start playback; YouTube may then process browsing data under its own policies.
 
 **Content**: the texts on this site are the property of their author. Publications are cited with their original references; open-access versions link to the HAL open archive.
 
