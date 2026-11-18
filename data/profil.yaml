@@ -88,9 +88,9 @@ liens:
     libelle: Cairn
     url: https://shs.cairn.info/publications-de-adrien-peneranda--138972
   - icone: web
-    libelle: Page LEREPS
-    libelle_en: LEREPS page
-    url: https://lereps.sciencespo-toulouse.fr/peneranda-adrien-645
+    libelle: Page Sciences Po Toulouse
+    libelle_en: Sciences Po Toulouse page
+    url: https://www.sciencespo-toulouse.fr/fr/annuaire/adrien-peneranda
   - icone: github
     libelle: GitHub
     url: https://github.com/apeneranda
