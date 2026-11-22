@@ -26,6 +26,10 @@ disableKinds = ["taxonomy", "term", "RSS"]
     pageRef = "/publications"
     weight = 20
   [[languages.en.menus.main]]
+    name = "Talks"
+    pageRef = "/conferences"
+    weight = 25
+  [[languages.en.menus.main]]
     name = "Teaching"
     pageRef = "/enseignement"
     weight = 30
@@ -54,6 +58,10 @@ disableKinds = ["taxonomy", "term", "RSS"]
     name = "Publications"
     pageRef = "/publications"
     weight = 20
+  [[languages.fr.menus.main]]
+    name = "Conférences"
+    pageRef = "/conferences"
+    weight = 25
   [[languages.fr.menus.main]]
     name = "Enseignement"
     pageRef = "/enseignement"

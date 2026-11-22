@@ -1,0 +1,125 @@
+# Conférences et interventions filmées ou enregistrées.
+# Une entrée par intervention, introduite par un tiret ; l'ordre est libre (tri par date).
+# La page « Conférences et interventions » les affiche toutes ; l'accueil n'affiche que
+# celles qui portent « accueil: true ».
+#
+#   date      : jour de l'intervention, au format AAAA-MM-JJ
+#   youtube   : identifiant de la vidéo (ce qui suit « v= » ou « /live/ » dans l'adresse)
+#   debut     : seconde où commence l'intervention (le « t= » de l'adresse) — facultatif ;
+#               hors YouTube, la laisser aussi dans l'adresse « integration » (…?t=6780)
+#   url       : adresse d'un enregistrement hébergé ailleurs (Canal-U, audio…) — à la place de « youtube » ;
+#               indiquer alors « hebergeur » dans les blocs fr et en (« Voir la vidéo sur … »)
+#   integration : adresse du lecteur d'un autre hébergeur, c'est-à-dire ce qui suit « src= » dans le code
+#               d'intégration du site (bouton « Intégrer » ou « Partager ») — en complément de « url »
+#   vignette  : image 16:9 affichée avant la lecture, déposée dans assets/img/ — facultative avec « url »
+#   affiche   : affiche ou image du colloque, déposée dans assets/img/ — facultatif
+#   accueil   : true pour afficher aussi l'intervention sur la page d'accueil — facultatif
+#   fr / en   : evenement, lieu (facultatif), titre, description dans chaque langue
+
+- date: 2026-11-14
+  youtube: xV4M7LzXj3U
+  debut: 5547
+  vignette: img/bolzano-2026.jpg
+  affiche: img/bolzano-2026-affiche.jpg
+  fr:
+    evenement: "64e colloque international de l'Institut international d'études européennes « Antonio Rosmini »"
+    lieu: "Antico Municipio, Bolzano"
+    titre: "Welfare, diritto ed economia"
+    description: "Intervention dans la séance « État-providence, droit et économie » du colloque *L'Europa e lo Stato sociale. Genesi, sviluppo, problemi sociali ed economici, crisi* (L'Europe et l'État social : genèse, développement, problèmes sociaux et économiques, crise), aux côtés d'Alessio Fontani (Rome) et d'Alessandro Venturi (Pavie). Séance filmée et diffusée en direct par l'Institut."
+  en:
+    evenement: "64th International Conference of the Institut International d'Études Européennes “Antonio Rosmini”"
+    lieu: "Antico Municipio, Bolzano"
+    titre: "Welfare, diritto ed economia [Welfare, Law and Economics]"
+    description: "Talk given in the session on welfare, law and economics of the conference *L'Europa e lo Stato sociale. Genesi, sviluppo, problemi sociali ed economici, crisi* (Europe and the Welfare State: Origins, Development, Social and Economic Problems, Crisis), alongside Alessio Fontani (Rome) and Alessandro Venturi (Pavia). The session was filmed and streamed live by the Institute."
+
+- date: 2026-04-16
+  youtube: _i0EeZvr7h0
+  vignette: img/rns-2026.jpg
+  accueil: true
+  fr:
+    evenement: "3es Rencontres numériques de Strasbourg"
+    lieu: "Parlement européen, Strasbourg"
+    titre: "Les conditions de la compétitivité numérique de l'économie européenne"
+    description: "Séance plénière d'ouverture de ces rencontres organisées par le Cigref et Numeum. Échange avec l'économiste Nicolas Bouzou (Asterès) sur l'inflation des coûts du cloud et des logiciels, la dépendance technologique de l'Europe et son sous-investissement en recherche et développement."
+  en:
+    evenement: "3rd Strasbourg Digital Meetings (Rencontres numériques de Strasbourg)"
+    lieu: "European Parliament, Strasbourg"
+    titre: "Les conditions de la compétitivité numérique de l'économie européenne [The Conditions for the Digital Competitiveness of the European Economy]"
+    description: "Opening plenary session of the meetings organised by Cigref and Numeum. A conversation with the economist Nicolas Bouzou (Asterès) on the rising cost of cloud and software services, Europe's technological dependence and its underinvestment in research and development. In French."
+
+- date: 2025-03-08
+  youtube: tmmI7PZXPWQ
+  vignette: img/saint-thomas-2025.jpg
+  fr:
+    evenement: "Journée Saint Thomas : « Saint Thomas d'Aquin face aux débats de société »"
+    lieu: "Toulouse"
+    titre: "Saint Thomas et la question de la technique"
+    description: "Conférence donnée lors du colloque organisé par l'Institut universitaire Saint-Pie X à l'occasion du 800e anniversaire de la naissance de saint Thomas d'Aquin."
+  en:
+    evenement: "Journée Saint Thomas: “Saint Thomas d'Aquin face aux débats de société” [Saint Thomas Aquinas and Today's Social Debates]"
+    lieu: "Toulouse"
+    titre: "Saint Thomas et la question de la technique [Saint Thomas and the Question of Technology]"
+    description: "Lecture given at the conference organised by the Institut universitaire Saint-Pie X to mark the 800th anniversary of the birth of Saint Thomas Aquinas. In French."
+
+- date: 2024-01-26
+  url: https://www.canal-u.tv/chaines/ut1capitole/thomisme-et-droit-troisieme-session-le-thomisme-juridique-au-xxe-siecle
+  integration: https://www.canal-u.tv/chaines/ut1capitole/embed/153151?t=6780
+  debut: 6780
+  fr:
+    evenement: "Colloque « Thomisme et droit, huit siècles d'histoire »"
+    lieu: "Université Toulouse Capitole, Toulouse"
+    titre: "La vertu de justice chez Marcel De Corte"
+    description: "Communication à la troisième session du colloque, « Le thomisme juridique au XXe siècle ». La vidéo réunit l'ensemble des communications de la session."
+    hebergeur: "Canal-U"
+  en:
+    evenement: "Conference “Thomisme et droit, huit siècles d'histoire” [Thomism and Law: Eight Centuries of History]"
+    lieu: "Université Toulouse Capitole, Toulouse"
+    titre: "La vertu de justice chez Marcel De Corte [The Virtue of Justice in Marcel De Corte]"
+    description: "Paper given in the third session of the conference, on legal Thomism in the twentieth century. The video covers all the papers of the session. In French."
+    hebergeur: "Canal-U"
+
+- date: 2019-06-12
+  url: https://www.canal-u.tv/chaines/ut1capitole/inforsid-2019-atelier-si2d/de-la-donnee-a-l-information-l-importance-des
+  integration: https://www.canal-u.tv/chaines/ut1capitole/embed/79253
+  fr:
+    evenement: "37e congrès INFORSID, atelier Systèmes d'information et démocratie (SI2D)"
+    lieu: "Université Paris-Dauphine, Paris"
+    titre: "De la donnée à l'information : l'importance des conventions"
+    description: "Communication présentée avec Anne Isla, Gabriel Colletis et Étienne Fieux lors de l'atelier consacré à l'impact des systèmes d'information numériques sur la démocratie dans les organisations."
+    hebergeur: "Canal-U"
+  en:
+    evenement: "37th INFORSID Conference, SI2D workshop (Information Systems and Democracy)"
+    lieu: "Université Paris-Dauphine, Paris"
+    titre: "De la donnée à l'information : l'importance des conventions [From Data to Information: The Importance of Conventions]"
+    description: "Paper presented with Anne Isla, Gabriel Colletis and Étienne Fieux at the workshop on the impact of digital information systems on democracy in organisations. In French."
+    hebergeur: "Canal-U"
+
+- date: 2018-10-05
+  url: https://webtv.uca.fr/video/7894d027-2c88-448e-abc1-3b8cfe954562
+  integration: https://opencast.dsi.uca.fr/paella7/ui/watch.html?id=7894d027-2c88-448e-abc1-3b8cfe954562
+  vignette: img/clermont-2018.jpg
+  affiche: img/clermont-2018-affiche.jpg
+  fr:
+    evenement: "Colloque « Du bien commun aux biens communs. Approches croisées »"
+    lieu: "École de droit, Université Clermont Auvergne, Clermont-Ferrand"
+    titre: "La gouvernance publique des biens communs informationnels"
+    description: "Communication au colloque interdisciplinaire de l'École de droit, codirigé avec Cyrille Dounot, Guillaume Sire, Marc Dupré et Pierre-Louis Boyer. La vidéo, deuxième des quatre parties du colloque, réunit aussi les communications de Guillaume Sire et de Baptiste Rappin."
+    hebergeur: "la WebTV de l'Université Clermont Auvergne"
+  en:
+    evenement: "Conference “Du bien commun aux biens communs. Approches croisées” [From the Common Good to the Commons: Crossed Perspectives]"
+    lieu: "School of Law, Université Clermont Auvergne, Clermont-Ferrand"
+    titre: "La gouvernance publique des biens communs informationnels [The Public Governance of Information Commons]"
+    description: "Paper given at the interdisciplinary conference of the School of Law, co-organised with Cyrille Dounot, Guillaume Sire, Marc Dupré and Pierre-Louis Boyer. The video, the second of the four parts of the conference, also includes the papers by Guillaume Sire and Baptiste Rappin. In French."
+    hebergeur: "the Université Clermont Auvergne WebTV"
+
+- date: 2013-01-24
+  youtube: aLhFvuIQD7s
+  vignette: img/endnote-nvivo-2013.jpg
+  fr:
+    evenement: "Tutoriel vidéo"
+    titre: "Commencer une revue de littérature avec EndNote et NVivo"
+    description: "Démonstration de l'usage conjoint de NVivo 10 et d'EndNote X6 pour réaliser une revue de littérature, en thèse de doctorat ou pour un article de recherche."
+  en:
+    evenement: "Video tutorial"
+    titre: "Commencer une revue de littérature avec EndNote et NVivo [Starting a Literature Review with EndNote and NVivo]"
+    description: "A demonstration of how NVivo 10 and EndNote X6 can be used together for a literature review, whether for a doctoral thesis or a research article. In French."

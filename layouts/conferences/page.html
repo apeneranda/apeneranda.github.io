@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="container page talks">
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }}
+  {{ range sort hugo.Data.conferences "date" "desc" }}
+  {{ partial "conference.html" (dict "c" . "niveau" "h2" "affiche" true) }}
+  {{ end }}
+</article>
+{{ end }}
+
+{{ define "scripts" }}
+{{ with resources.Get "js/video.js" | minify | fingerprint }}
+<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+{{ end }}
+{{ end }}

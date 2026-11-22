@@ -1,0 +1,73 @@
+{{- /* Une intervention de data/conferences.yaml : événement, vidéo chargée au clic, texte, affiche.
+       Paramètres : c (l'entrée), niveau (balise du titre, h2 par défaut), affiche (afficher l'affiche du colloque). */ -}}
+{{- $c := .c -}}
+{{- $t := index $c site.Language.Lang -}}
+{{- $h := .niveau | default "h2" -}}
+{{- $poster := and .affiche $c.affiche -}}
+{{- $watch := "" -}}
+{{- $embed := "" -}}
+{{- $debut := "" -}}
+{{- $heb := $t.hebergeur -}}
+{{- $s := 0 -}}
+{{- with $c.debut -}}
+  {{- $s = int . -}}
+  {{- $debut = printf "%d:%02d" (div $s 60) (mod $s 60) -}}
+  {{- if ge $s 3600 }}{{ $debut = printf "%d:%02d:%02d" (div $s 3600) (mod (div $s 60) 60) (mod $s 60) }}{{ end -}}
+{{- end -}}
+{{- with $c.youtube -}}
+  {{- /* YouTube : adresses construites à partir de l'identifiant */ -}}
+  {{- $heb = "YouTube" -}}
+  {{- $watch = printf "https://www.youtube.com/watch?v=%s" . -}}
+  {{- $embed = printf "https://www.youtube-nocookie.com/embed/%s?autoplay=1&rel=0" . -}}
+  {{- if $s -}}
+    {{- $watch = printf "%s&t=%ds" $watch $s -}}
+    {{- $embed = printf "%s&start=%d" $embed $s -}}
+  {{- end -}}
+{{- else -}}
+  {{- /* Autre hébergeur : adresse du lecteur (src du code d'intégration) dans « integration » */ -}}
+  {{- with $c.integration -}}
+    {{- $embed = . -}}
+    {{- if not $heb }}{{ $heb = (urls.Parse .).Hostname }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- $lien := $watch | default $c.url | default $embed -}}
+<article class="talk{{ if $poster }} talk-with-poster{{ end }}">
+  {{ printf "<%s class=\"video-event\">" $h | safeHTML }}{{ $t.evenement }} <span class="video-where">{{ with $t.lieu }}{{ . }} · {{ end }}{{ time.AsTime $c.date | time.Format ":date_long" }}</span>{{ printf "</%s>" $h | safeHTML }}
+  <div class="talk-body">
+    <figure class="talk-media">
+      {{- /* Vignette locale (ou cadre neutre) : le lecteur n'est chargé qu'au clic (assets/js/video.js). */}}
+      {{ if and $lien (or $c.vignette $embed) }}
+      <a class="video-frame{{ if not $c.vignette }} video-frame-vide{{ end }}" href="{{ $lien }}"{{ with $embed }} data-embed="{{ . }}"{{ end }} data-title="{{ $t.titre }}" aria-label="{{ i18n "video_lire" }} : {{ $t.titre }}">
+        {{ with $c.vignette }}
+        {{ with resources.Get . }}
+        {{ $img := .Fill "1280x720 q82" }}
+        <img src="{{ $img.RelPermalink }}" width="1280" height="720" alt="" loading="lazy">
+        {{ end }}
+        {{ else }}
+        <span class="video-host" aria-hidden="true">{{ $heb }}</span>
+        {{ end }}
+        <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      {{ end }}
+      <figcaption>
+        <p class="video-title">{{ $t.titre }}</p>
+        {{ with $t.description }}<p>{{ . | markdownify }}</p>{{ end }}
+        {{ if $embed }}
+        <p class="video-note">{{ i18n "video_note" $heb }}{{ with $debut }} {{ i18n "video_debut" . }}{{ end }} <a href="{{ $lien }}">{{ i18n "video_voir" $heb }}</a></p>
+        {{ else if $lien }}
+        <p class="talk-link"><a href="{{ $lien }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>{{ with $t.hebergeur }}{{ i18n "voir_sur" . }}{{ else }}{{ i18n "enregistrement" }}{{ end }}</a></p>
+        {{ end }}
+      </figcaption>
+    </figure>
+    {{ if $poster }}
+    {{ with resources.Get $c.affiche }}
+    {{ $small := .Resize "440x q85" }}
+    {{ $big := . }}
+    {{ if gt .Width 1400 }}{{ $big = .Resize "1400x q85" }}{{ end }}
+    <a class="talk-poster" href="{{ $big.RelPermalink }}" title="{{ i18n "affiche_agrandir" }}">
+      <img src="{{ $small.RelPermalink }}" width="220" height="{{ div (mul $small.Height 220) $small.Width }}" alt="{{ i18n "affiche" }} : {{ $t.evenement }}" loading="lazy">
+    </a>
+    {{ end }}
+    {{ end }}
+  </div>
+</article>

@@ -1,4 +1,4 @@
-// Vidéo de l'accueil : la vignette est remplacée par le lecteur YouTube au clic.
+// Vidéos (accueil et page « Conférences ») : la vignette est remplacée par le lecteur YouTube au clic.
 // Rien n'est chargé depuis YouTube avant ; sans JavaScript, le lien ouvre YouTube.
 (function () {
   document.querySelectorAll('a.video-frame[data-embed]').forEach(function (link) {
