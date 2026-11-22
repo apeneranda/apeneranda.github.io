@@ -56,3 +56,9 @@ interventions: Interventions récentes
 video_lire: Lire la vidéo
 video_note: Vidéo hébergée par YouTube, chargée uniquement au clic.
 video_youtube: Voir sur YouTube
+# Conférences
+conferences_toutes: Toutes les conférences
+video_debut: "L'intervention commence à {{ . }}."
+enregistrement: Accéder à l'enregistrement
+affiche: Affiche
+affiche_agrandir: Agrandir l'affiche

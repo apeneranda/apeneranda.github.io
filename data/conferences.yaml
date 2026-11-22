@@ -1,0 +1,41 @@
+# Conférences et interventions filmées ou enregistrées.
+# Une entrée par intervention, introduite par un tiret ; l'ordre est libre (tri par date).
+# La page « Conférences » les affiche toutes, l'accueil les deux plus récentes.
+#
+#   date      : jour de l'intervention, au format AAAA-MM-JJ
+#   youtube   : identifiant de la vidéo (ce qui suit « v= » ou « /live/ » dans l'adresse)
+#   debut     : seconde où commence l'intervention (le « t= » de l'adresse) — facultatif
+#   url       : adresse d'un enregistrement hébergé ailleurs (audio, autre site) — à la place de « youtube »
+#   vignette  : image 16:9 affichée avant la lecture, déposée dans assets/img/
+#   affiche   : affiche ou image du colloque, déposée dans assets/img/ — facultatif
+#   fr / en   : evenement, lieu, titre, description dans chaque langue
+
+- date: 2026-11-14
+  youtube: xV4M7LzXj3U
+  debut: 5547
+  vignette: img/bolzano-2026.jpg
+  affiche: img/bolzano-2026-affiche.jpg
+  fr:
+    evenement: "64e colloque international de l'Institut international d'études européennes « Antonio Rosmini »"
+    lieu: "Antico Municipio, Bolzano"
+    titre: "Welfare, diritto ed economia"
+    description: "Intervention dans la séance « État-providence, droit et économie » du colloque *L'Europa e lo Stato sociale. Genesi, sviluppo, problemi sociali ed economici, crisi* (L'Europe et l'État social : genèse, développement, problèmes sociaux et économiques, crise), aux côtés d'Alessio Fontani (Rome) et d'Alessandro Venturi (Pavie). Séance filmée et diffusée en direct par l'Institut."
+  en:
+    evenement: "64th International Conference of the Institut International d'Études Européennes “Antonio Rosmini”"
+    lieu: "Antico Municipio, Bolzano"
+    titre: "Welfare, diritto ed economia [Welfare, Law and Economics]"
+    description: "Talk given in the session on welfare, law and economics of the conference *L'Europa e lo Stato sociale. Genesi, sviluppo, problemi sociali ed economici, crisi* (Europe and the Welfare State: Origins, Development, Social and Economic Problems, Crisis), alongside Alessio Fontani (Rome) and Alessandro Venturi (Pavia). The session was filmed and streamed live by the Institute."
+
+- date: 2026-04-16
+  youtube: _i0EeZvr7h0
+  vignette: img/rns-2026.jpg
+  fr:
+    evenement: "3es Rencontres numériques de Strasbourg"
+    lieu: "Parlement européen, Strasbourg"
+    titre: "Les conditions de la compétitivité numérique de l'économie européenne"
+    description: "Séance plénière d'ouverture de ces rencontres organisées par le Cigref et Numeum. Échange avec l'économiste Nicolas Bouzou (Asterès) sur l'inflation des coûts du cloud et des logiciels, la dépendance technologique de l'Europe et son sous-investissement en recherche et développement."
+  en:
+    evenement: "3rd Strasbourg Digital Meetings (Rencontres numériques de Strasbourg)"
+    lieu: "European Parliament, Strasbourg"
+    titre: "Les conditions de la compétitivité numérique de l'économie européenne [The Conditions for the Digital Competitiveness of the European Economy]"
+    description: "Opening plenary session of the meetings organised by Cigref and Numeum. A conversation with the economist Nicolas Bouzou (Asterès) on the rising cost of cloud and software services, Europe's technological dependence and its underinvestment in research and development. In French."
