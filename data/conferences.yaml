@@ -13,6 +13,8 @@
 #               d'intégration du site (bouton « Intégrer » ou « Partager ») — en complément de « url »
 #   vignette  : image 16:9 affichée avant la lecture, déposée dans assets/img/ — facultative avec « url »
 #   affiche   : affiche ou image du colloque, déposée dans assets/img/ — facultatif
+#   liens     : liens complémentaires (programme, page du colloque, affiche en PDF…) : pour chacun,
+#               « url » puis le libellé dans chaque langue (« fr », « en ») — facultatif
 #   accueil   : true pour afficher aussi l'intervention sur la page d'accueil — facultatif
 #   fr / en   : evenement, lieu (facultatif), titre, description dans chaque langue
 
@@ -50,14 +52,19 @@
 - date: 2025-03-08
   youtube: tmmI7PZXPWQ
   vignette: img/saint-thomas-2025.jpg
+  affiche: img/saint-thomas-2025-affiche.jpg
+  liens:
+    - url: https://iuspx.fr/wp-content/uploads/colloque-Toulouse-mars-2025.pdf
+      fr: "Affiche et programme (PDF)"
+      en: "Poster and programme (PDF)"
   fr:
     evenement: "Journée Saint Thomas : « Saint Thomas d'Aquin face aux débats de société »"
-    lieu: "Toulouse"
+    lieu: "Salle Antoine-Osète, Toulouse"
     titre: "Saint Thomas et la question de la technique"
     description: "Conférence donnée lors du colloque organisé par l'Institut universitaire Saint-Pie X à l'occasion du 800e anniversaire de la naissance de saint Thomas d'Aquin."
   en:
     evenement: "Journée Saint Thomas: “Saint Thomas d'Aquin face aux débats de société” [Saint Thomas Aquinas and Today's Social Debates]"
-    lieu: "Toulouse"
+    lieu: "Salle Antoine-Osète, Toulouse"
     titre: "Saint Thomas et la question de la technique [Saint Thomas and the Question of Technology]"
     description: "Lecture given at the conference organised by the Institut universitaire Saint-Pie X to mark the 800th anniversary of the birth of Saint Thomas Aquinas. In French."
 
@@ -65,6 +72,12 @@
   url: https://www.canal-u.tv/chaines/ut1capitole/thomisme-et-droit-troisieme-session-le-thomisme-juridique-au-xxe-siecle
   integration: https://www.canal-u.tv/chaines/ut1capitole/embed/153151?t=6780
   debut: 6780
+  vignette: img/thomisme-droit-2024.jpg
+  affiche: img/thomisme-droit-2024-affiche.jpg
+  liens:
+    - url: https://univ-droit.fr/recherche/actualites-de-la-recherche/manifestations/50548-thomisme-et-droit-huit-siecles-d-histoire
+      fr: "Annonce et programme du colloque (Portail universitaire du droit)"
+      en: "Conference announcement and programme (Portail universitaire du droit)"
   fr:
     evenement: "Colloque « Thomisme et droit, huit siècles d'histoire »"
     lieu: "Université Toulouse Capitole, Toulouse"
@@ -81,17 +94,26 @@
 - date: 2019-06-12
   url: https://www.canal-u.tv/chaines/ut1capitole/inforsid-2019-atelier-si2d/de-la-donnee-a-l-information-l-importance-des
   integration: https://www.canal-u.tv/chaines/ut1capitole/embed/79253
+  vignette: img/inforsid-2019.jpg
+  affiche: img/inforsid-2019-affiche.jpg
+  liens:
+    - url: https://si2d.hypotheses.org/1601
+      fr: "Billet de l'atelier sur le carnet SI2D"
+      en: "Workshop post on the SI2D research blog"
+    - url: https://si2d.hypotheses.org/files/2019/06/Affiche-INFORSID.pdf
+      fr: "Affiche et programme (PDF)"
+      en: "Poster and programme (PDF)"
   fr:
     evenement: "37e congrès INFORSID, atelier Systèmes d'information et démocratie (SI2D)"
     lieu: "Université Paris-Dauphine, Paris"
     titre: "De la donnée à l'information : l'importance des conventions"
-    description: "Communication présentée avec Anne Isla, Gabriel Colletis et Étienne Fieux lors de l'atelier consacré à l'impact des systèmes d'information numériques sur la démocratie dans les organisations."
+    description: "Communication présentée avec Anne Isla, Gabriel Colletis et Étienne Fieux lors de la troisième édition de l'atelier « Systèmes d'information et démocratie dans les organisations », dans la séance « Les systèmes d'information contre la démocratie des organisations ? », où intervenaient aussi Maryse Salles, Raphaëlle Bour et Claude Paraponaris."
     hebergeur: "Canal-U"
   en:
     evenement: "37th INFORSID Conference, SI2D workshop (Information Systems and Democracy)"
     lieu: "Université Paris-Dauphine, Paris"
     titre: "De la donnée à l'information : l'importance des conventions [From Data to Information: The Importance of Conventions]"
-    description: "Paper presented with Anne Isla, Gabriel Colletis and Étienne Fieux at the workshop on the impact of digital information systems on democracy in organisations. In French."
+    description: "Paper presented with Anne Isla, Gabriel Colletis and Étienne Fieux at the third edition of the workshop on information systems and democracy in organisations, in the session “Les systèmes d'information contre la démocratie des organisations ?” (Information systems against democracy in organisations?), which also featured Maryse Salles, Raphaëlle Bour and Claude Paraponaris. In French."
     hebergeur: "Canal-U"
 
 - date: 2018-10-05

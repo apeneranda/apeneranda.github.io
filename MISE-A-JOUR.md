@@ -142,6 +142,15 @@ Chaque intervention est une entrée introduite par un tiret :
   files**), puis indiquer leur nom précédé de `img/`. La vignette est recadrée en 16:9 ;
   l'affiche garde ses proportions et s'agrandit au clic. Elle n'apparaît que sur la page
   « Conférences et interventions ».
+- `liens` (facultatif) : liens affichés sous la présentation (programme, page du colloque,
+  affiche en PDF…). Pour chacun, l'adresse puis le libellé dans chaque langue :
+
+  ```yaml
+  liens:
+    - url: https://…/programme.pdf
+      fr: "Programme (PDF)"
+      en: "Programme (PDF)"
+  ```
 
 Pour ajouter une intervention, copier une entrée, l'adapter et la coller n'importe où dans
 la liste. Rien n'est chargé depuis YouTube, Canal-U ou un autre hébergeur tant que le visiteur ne clique pas sur une vignette.
