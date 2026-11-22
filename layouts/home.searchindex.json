@@ -17,7 +17,7 @@
     {{- else if eq .Path "/conferences" -}}
       {{- range hugo.Data.conferences -}}
         {{- $c := index . site.Language.Lang -}}
-        {{- $text = printf "%s %s %s %s %s %s" $text $c.evenement $c.lieu (time.AsTime .date | time.Format ":date_long") $c.titre ($c.description | markdownify | plainify) -}}
+        {{- $text = printf "%s %s %s %s %s %s" $text $c.evenement ($c.lieu | default "") (time.AsTime .date | time.Format ":date_long") $c.titre ($c.description | markdownify | plainify) -}}
       {{- end -}}
     {{- else if eq .Path "/contact" -}}
       {{- $text = printf "%s %s %s" $p.contact.email (delimit $p.contact.adresse " ") $t.bureau -}}

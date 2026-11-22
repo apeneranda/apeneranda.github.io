@@ -1,5 +1,5 @@
 ---
-title: Conférences
+title: Conférences et interventions
 description: "Conférences et interventions filmées ou enregistrées d'Adrien Peneranda : colloques, rencontres professionnelles, conférences invitées."
 ---
 

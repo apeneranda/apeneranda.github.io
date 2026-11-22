@@ -1,6 +1,7 @@
 # Conférences et interventions filmées ou enregistrées.
 # Une entrée par intervention, introduite par un tiret ; l'ordre est libre (tri par date).
-# La page « Conférences » les affiche toutes, l'accueil les deux plus récentes.
+# La page « Conférences et interventions » les affiche toutes ; l'accueil n'affiche que
+# celles qui portent « accueil: true ».
 #
 #   date      : jour de l'intervention, au format AAAA-MM-JJ
 #   youtube   : identifiant de la vidéo (ce qui suit « v= » ou « /live/ » dans l'adresse)
@@ -8,7 +9,8 @@
 #   url       : adresse d'un enregistrement hébergé ailleurs (audio, autre site) — à la place de « youtube »
 #   vignette  : image 16:9 affichée avant la lecture, déposée dans assets/img/
 #   affiche   : affiche ou image du colloque, déposée dans assets/img/ — facultatif
-#   fr / en   : evenement, lieu, titre, description dans chaque langue
+#   accueil   : true pour afficher aussi l'intervention sur la page d'accueil — facultatif
+#   fr / en   : evenement, lieu (facultatif), titre, description dans chaque langue
 
 - date: 2026-11-14
   youtube: xV4M7LzXj3U
@@ -29,6 +31,7 @@
 - date: 2026-04-16
   youtube: _i0EeZvr7h0
   vignette: img/rns-2026.jpg
+  accueil: true
   fr:
     evenement: "3es Rencontres numériques de Strasbourg"
     lieu: "Parlement européen, Strasbourg"
@@ -39,3 +42,29 @@
     lieu: "European Parliament, Strasbourg"
     titre: "Les conditions de la compétitivité numérique de l'économie européenne [The Conditions for the Digital Competitiveness of the European Economy]"
     description: "Opening plenary session of the meetings organised by Cigref and Numeum. A conversation with the economist Nicolas Bouzou (Asterès) on the rising cost of cloud and software services, Europe's technological dependence and its underinvestment in research and development. In French."
+
+- date: 2025-03-08
+  youtube: tmmI7PZXPWQ
+  vignette: img/saint-thomas-2025.jpg
+  fr:
+    evenement: "Journée Saint Thomas : « Saint Thomas d'Aquin face aux débats de société »"
+    lieu: "Toulouse"
+    titre: "Saint Thomas et la question de la technique"
+    description: "Conférence donnée lors du colloque organisé par l'Institut universitaire Saint-Pie X à l'occasion du 800e anniversaire de la naissance de saint Thomas d'Aquin."
+  en:
+    evenement: "Journée Saint Thomas: “Saint Thomas d'Aquin face aux débats de société” [Saint Thomas Aquinas and Today's Social Debates]"
+    lieu: "Toulouse"
+    titre: "Saint Thomas et la question de la technique [Saint Thomas and the Question of Technology]"
+    description: "Lecture given at the conference organised by the Institut universitaire Saint-Pie X to mark the 800th anniversary of the birth of Saint Thomas Aquinas. In French."
+
+- date: 2013-01-24
+  youtube: aLhFvuIQD7s
+  vignette: img/endnote-nvivo-2013.jpg
+  fr:
+    evenement: "Tutoriel vidéo"
+    titre: "Commencer une revue de littérature avec EndNote et NVivo"
+    description: "Démonstration de l'usage conjoint de NVivo 10 et d'EndNote X6 pour réaliser une revue de littérature, en thèse de doctorat ou pour un article de recherche."
+  en:
+    evenement: "Video tutorial"
+    titre: "Commencer une revue de littérature avec EndNote et NVivo [Starting a Literature Review with EndNote and NVivo]"
+    description: "A demonstration of how NVivo 10 and EndNote X6 can be used together for a literature review, whether for a doctoral thesis or a research article. In French."

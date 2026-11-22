@@ -68,10 +68,10 @@
       {{ end }}
     </ul>
 
-    {{/* Les deux interventions les plus récentes ; toutes sont sur la page « Conférences ». */}}
-    {{ with hugo.Data.conferences }}
+    {{/* Interventions marquées « accueil: true » ; toutes sont sur la page « Conférences et interventions ». */}}
+    {{ with where hugo.Data.conferences "accueil" true }}
     <h2 class="home-h">{{ i18n "interventions" }}</h2>
-    {{ range first 2 (sort . "date" "desc") }}
+    {{ range sort . "date" "desc" }}
     {{ partial "conference.html" (dict "c" . "niveau" "h3") }}
     {{ end }}
     {{ with site.GetPage "/conferences" }}
@@ -83,7 +83,7 @@
 {{ end }}
 
 {{ define "scripts" }}
-{{ if hugo.Data.conferences }}
+{{ if where hugo.Data.conferences "accueil" true }}
 {{ with resources.Get "js/video.js" | minify | fingerprint }}
 <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
 {{ end }}

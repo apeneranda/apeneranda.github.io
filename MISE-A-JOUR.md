@@ -73,13 +73,13 @@ droite du menu, mène à la même page dans l'autre langue. Chaque page a deux f
 | Bio courte (accueil) | `content/_index.en.md` | `content/_index.fr.md` |
 | Bio longue, fonctions, parcours, conférences | `content/bio.en.md` | `content/bio.fr.md` |
 | Enseignement et encadrement | `content/enseignement.en.md` | `content/enseignement.fr.md` |
-| Phrase d'introduction de la page Conférences | `content/conferences.en.md` | `content/conferences.fr.md` |
+| Titre et phrase d'introduction de la page Conférences et interventions | `content/conferences.en.md` | `content/conferences.fr.md` |
 | Mentions légales | `content/mentions-legales.en.md` | `content/mentions-legales.fr.md` |
 
 | Autres réglages | Fichier |
 |---|---|
 | Accueil : nom, fonction, lignes « Research Fellow / Laboratoire », domaines, formation (blocs `fr` et `en`), coordonnées, liens | `data/profil.yaml` |
-| Conférences filmées ou enregistrées (page Conférences et accueil) | `data/conferences.yaml` |
+| Conférences et interventions filmées ou enregistrées (page et accueil) | `data/conferences.yaml` |
 | Menus des deux langues, descriptions, publications mises en avant | `hugo.toml` |
 | Petits libellés de l'interface (boutons, titres de rubriques) | `i18n/fr.yaml`, `i18n/en.yaml` |
 
@@ -100,9 +100,11 @@ valeur affiche l'icône générique `web`).
 
 ## Conférences (vidéos, enregistrements, affiches)
 
-La page « Conférences » (« Talks » en anglais) et la rubrique « Interventions récentes »
-de l'accueil sont alimentées par un seul fichier, `data/conferences.yaml`. La page affiche
-toutes les interventions, l'accueil les deux plus récentes ; le tri par date est automatique.
+La page « Conférences et interventions » (« Talks and Lectures » en anglais ; « Conférences »
+et « Talks » dans le menu) et la rubrique « Interventions récentes » de l'accueil sont
+alimentées par un seul fichier, `data/conferences.yaml`. La page affiche toutes les
+interventions ; l'accueil n'affiche que celles qui portent la ligne `accueil: true`.
+Le tri par date est automatique.
 
 Chaque intervention est une entrée introduite par un tiret :
 
@@ -112,9 +114,10 @@ Chaque intervention est une entrée introduite par un tiret :
   debut: 5547                              # seconde où commence l'intervention (facultatif)
   vignette: img/bolzano-2026.jpg           # image 16:9 affichée avant la lecture
   affiche: img/bolzano-2026-affiche.jpg    # affiche ou image du colloque (facultatif)
+  accueil: true                            # à ajouter pour l'afficher aussi sur l'accueil
   fr:
     evenement: "Nom du colloque"
-    lieu: "Lieu, ville"
+    lieu: "Lieu, ville"                   # facultatif
     titre: "Titre de l'intervention"
     description: "Quelques lignes de présentation."
   en:
@@ -132,7 +135,7 @@ Chaque intervention est une entrée introduite par un tiret :
 - `vignette` et `affiche` : déposer les images dans `assets/img/` (**Add file → Upload
   files**), puis indiquer leur nom précédé de `img/`. La vignette est recadrée en 16:9 ;
   l'affiche garde ses proportions et s'agrandit au clic. Elle n'apparaît que sur la page
-  « Conférences ».
+  « Conférences et interventions ».
 
 Pour ajouter une intervention, copier une entrée, l'adapter et la coller n'importe où dans
 la liste. Rien n'est chargé depuis YouTube tant que le visiteur ne clique pas sur une vignette.

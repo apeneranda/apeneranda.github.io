@@ -20,7 +20,7 @@
 {{- end -}}
 {{- $lien := $watch | default $c.url -}}
 <article class="talk{{ if $poster }} talk-with-poster{{ end }}">
-  {{ printf "<%s class=\"video-event\">" $h | safeHTML }}{{ $t.evenement }} <span class="video-where">{{ $t.lieu }} · {{ time.AsTime $c.date | time.Format ":date_long" }}</span>{{ printf "</%s>" $h | safeHTML }}
+  {{ printf "<%s class=\"video-event\">" $h | safeHTML }}{{ $t.evenement }} <span class="video-where">{{ with $t.lieu }}{{ . }} · {{ end }}{{ time.AsTime $c.date | time.Format ":date_long" }}</span>{{ printf "</%s>" $h | safeHTML }}
   <div class="talk-body">
     <figure class="talk-media">
       {{- /* Vignette locale : le lecteur YouTube n'est chargé qu'au clic (assets/js/video.js). */}}
