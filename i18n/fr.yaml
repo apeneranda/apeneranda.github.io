@@ -60,5 +60,6 @@ video_youtube: Voir sur YouTube
 conferences_toutes: Toutes les conférences et interventions
 video_debut: "L'intervention commence à {{ . }}."
 enregistrement: Accéder à l'enregistrement
+voir_sur: "Voir la vidéo sur {{ . }}"
 affiche: Affiche
 affiche_agrandir: Agrandir l'affiche

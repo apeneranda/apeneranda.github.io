@@ -58,5 +58,6 @@ video_youtube: Watch on YouTube
 conferences_toutes: All talks and lectures
 video_debut: "The talk starts at {{ . }}."
 enregistrement: Go to the recording
+voir_sur: "Watch the video on {{ . }}"
 affiche: Poster
 affiche_agrandir: Enlarge the poster

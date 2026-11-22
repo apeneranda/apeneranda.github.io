@@ -6,8 +6,9 @@
 #   date      : jour de l'intervention, au format AAAA-MM-JJ
 #   youtube   : identifiant de la vidéo (ce qui suit « v= » ou « /live/ » dans l'adresse)
 #   debut     : seconde où commence l'intervention (le « t= » de l'adresse) — facultatif
-#   url       : adresse d'un enregistrement hébergé ailleurs (audio, autre site) — à la place de « youtube »
-#   vignette  : image 16:9 affichée avant la lecture, déposée dans assets/img/
+#   url       : adresse d'un enregistrement hébergé ailleurs (Canal-U, audio…) — à la place de « youtube » ;
+#               indiquer alors « hebergeur » dans les blocs fr et en (« Voir la vidéo sur … »)
+#   vignette  : image 16:9 affichée avant la lecture, déposée dans assets/img/ — facultative avec « url »
 #   affiche   : affiche ou image du colloque, déposée dans assets/img/ — facultatif
 #   accueil   : true pour afficher aussi l'intervention sur la page d'accueil — facultatif
 #   fr / en   : evenement, lieu (facultatif), titre, description dans chaque langue
@@ -56,6 +57,36 @@
     lieu: "Toulouse"
     titre: "Saint Thomas et la question de la technique [Saint Thomas and the Question of Technology]"
     description: "Lecture given at the conference organised by the Institut universitaire Saint-Pie X to mark the 800th anniversary of the birth of Saint Thomas Aquinas. In French."
+
+- date: 2019-06-12
+  url: https://www.canal-u.tv/chaines/ut1capitole/inforsid-2019-atelier-si2d/de-la-donnee-a-l-information-l-importance-des
+  fr:
+    evenement: "37e congrès INFORSID, atelier Systèmes d'information et démocratie (SI2D)"
+    lieu: "Université Paris-Dauphine, Paris"
+    titre: "De la donnée à l'information : l'importance des conventions"
+    description: "Communication présentée avec Anne Isla, Gabriel Colletis et Étienne Fieux lors de l'atelier consacré à l'impact des systèmes d'information numériques sur la démocratie dans les organisations."
+    hebergeur: "Canal-U"
+  en:
+    evenement: "37th INFORSID Conference, SI2D workshop (Information Systems and Democracy)"
+    lieu: "Université Paris-Dauphine, Paris"
+    titre: "De la donnée à l'information : l'importance des conventions [From Data to Information: The Importance of Conventions]"
+    description: "Paper presented with Anne Isla, Gabriel Colletis and Étienne Fieux at the workshop on the impact of digital information systems on democracy in organisations. In French."
+    hebergeur: "Canal-U"
+
+- date: 2018-10-05
+  url: https://webtv.uca.fr/video/7894d027-2c88-448e-abc1-3b8cfe954562
+  fr:
+    evenement: "Colloque « Du bien commun aux biens communs. Approches croisées »"
+    lieu: "École de droit, Université Clermont Auvergne, Clermont-Ferrand"
+    titre: "La gouvernance publique des biens communs informationnels"
+    description: "Communication au colloque interdisciplinaire de l'École de droit. La vidéo, deuxième des quatre parties du colloque, réunit aussi les communications de Guillaume Sire et de Baptiste Rappin."
+    hebergeur: "la WebTV de l'Université Clermont Auvergne"
+  en:
+    evenement: "Conference “Du bien commun aux biens communs. Approches croisées” [From the Common Good to the Commons: Crossed Perspectives]"
+    lieu: "School of Law, Université Clermont Auvergne, Clermont-Ferrand"
+    titre: "La gouvernance publique des biens communs informationnels [The Public Governance of Information Commons]"
+    description: "Paper given at the interdisciplinary conference of the School of Law. The video, the second of the four parts of the conference, also includes the papers by Guillaume Sire and Baptiste Rappin. In French."
+    hebergeur: "the Université Clermont Auvergne WebTV"
 
 - date: 2013-01-24
   youtube: aLhFvuIQD7s

@@ -39,7 +39,7 @@
         {{ if $watch }}
         <p class="video-note">{{ i18n "video_note" }}{{ with $debut }} {{ i18n "video_debut" . }}{{ end }} <a href="{{ $watch }}">{{ i18n "video_youtube" }}</a></p>
         {{ else if $lien }}
-        <p class="video-note"><a href="{{ $lien }}">{{ i18n "enregistrement" }}</a></p>
+        <p class="talk-link"><a href="{{ $lien }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>{{ with $t.hebergeur }}{{ i18n "voir_sur" . }}{{ else }}{{ i18n "enregistrement" }}{{ end }}</a></p>
         {{ end }}
       </figcaption>
     </figure>

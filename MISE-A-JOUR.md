@@ -130,8 +130,10 @@ Chaque intervention est une entrée introduite par un tiret :
 - `youtube` : ce qui suit `v=` (ou `/live/`) dans l'adresse de la vidéo. Dans
   `https://www.youtube.com/live/xV4M7LzXj3U?t=5547`, l'identifiant est `xV4M7LzXj3U`
   et `debut` vaut `5547`.
-- Pour un enregistrement hébergé ailleurs (audio, autre site), remplacer `youtube` par
-  `url: https://…` : la vignette mène alors à cette adresse.
+- Pour un enregistrement hébergé ailleurs (Canal-U, WebTV d'une université, audio…),
+  remplacer `youtube` par `url: https://…` et ajouter, dans les blocs `fr` et `en`, une
+  ligne `hebergeur: "Canal-U"` : un bouton « Voir la vidéo sur Canal-U » mène à cette
+  adresse. La vignette est alors facultative.
 - `vignette` et `affiche` : déposer les images dans `assets/img/` (**Add file → Upload
   files**), puis indiquer leur nom précédé de `img/`. La vignette est recadrée en 16:9 ;
   l'affiche garde ses proportions et s'agrandit au clic. Elle n'apparaît que sur la page
