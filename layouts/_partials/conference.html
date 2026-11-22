@@ -52,6 +52,11 @@
       <figcaption>
         <p class="video-title">{{ $t.titre }}</p>
         {{ with $t.description }}<p>{{ . | markdownify }}</p>{{ end }}
+        {{ with $c.liens }}
+        <ul class="talk-links">
+          {{ range . }}<li><a href="{{ .url }}">{{ index . site.Language.Lang }}</a></li>{{ end }}
+        </ul>
+        {{ end }}
         {{ if $embed }}
         <p class="video-note">{{ i18n "video_note" $heb }}{{ with $debut }} {{ i18n "video_debut" . }}{{ end }} <a href="{{ $lien }}">{{ i18n "video_voir" $heb }}</a></p>
         {{ else if $lien }}
