@@ -5,9 +5,12 @@
 #
 #   date      : jour de l'intervention, au format AAAA-MM-JJ
 #   youtube   : identifiant de la vidéo (ce qui suit « v= » ou « /live/ » dans l'adresse)
-#   debut     : seconde où commence l'intervention (le « t= » de l'adresse) — facultatif
+#   debut     : seconde où commence l'intervention (le « t= » de l'adresse) — facultatif ;
+#               hors YouTube, la laisser aussi dans l'adresse « integration » (…?t=6780)
 #   url       : adresse d'un enregistrement hébergé ailleurs (Canal-U, audio…) — à la place de « youtube » ;
 #               indiquer alors « hebergeur » dans les blocs fr et en (« Voir la vidéo sur … »)
+#   integration : adresse du lecteur d'un autre hébergeur, c'est-à-dire ce qui suit « src= » dans le code
+#               d'intégration du site (bouton « Intégrer » ou « Partager ») — en complément de « url »
 #   vignette  : image 16:9 affichée avant la lecture, déposée dans assets/img/ — facultative avec « url »
 #   affiche   : affiche ou image du colloque, déposée dans assets/img/ — facultatif
 #   accueil   : true pour afficher aussi l'intervention sur la page d'accueil — facultatif
@@ -60,6 +63,8 @@
 
 - date: 2024-01-26
   url: https://www.canal-u.tv/chaines/ut1capitole/thomisme-et-droit-troisieme-session-le-thomisme-juridique-au-xxe-siecle
+  integration: https://www.canal-u.tv/chaines/ut1capitole/embed/153151?t=6780
+  debut: 6780
   fr:
     evenement: "Colloque « Thomisme et droit, huit siècles d'histoire »"
     lieu: "Université Toulouse Capitole, Toulouse"
@@ -75,6 +80,7 @@
 
 - date: 2019-06-12
   url: https://www.canal-u.tv/chaines/ut1capitole/inforsid-2019-atelier-si2d/de-la-donnee-a-l-information-l-importance-des
+  integration: https://www.canal-u.tv/chaines/ut1capitole/embed/79253
   fr:
     evenement: "37e congrès INFORSID, atelier Systèmes d'information et démocratie (SI2D)"
     lieu: "Université Paris-Dauphine, Paris"
@@ -90,6 +96,7 @@
 
 - date: 2018-10-05
   url: https://webtv.uca.fr/video/7894d027-2c88-448e-abc1-3b8cfe954562
+  integration: https://opencast.dsi.uca.fr/paella7/ui/watch.html?id=7894d027-2c88-448e-abc1-3b8cfe954562
   fr:
     evenement: "Colloque « Du bien commun aux biens communs. Approches croisées »"
     lieu: "École de droit, Université Clermont Auvergne, Clermont-Ferrand"

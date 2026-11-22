@@ -134,13 +134,17 @@ Chaque intervention est une entrée introduite par un tiret :
   remplacer `youtube` par `url: https://…` et ajouter, dans les blocs `fr` et `en`, une
   ligne `hebergeur: "Canal-U"` : un bouton « Voir la vidéo sur Canal-U » mène à cette
   adresse. La vignette est alors facultative.
+- Pour que cette vidéo se lise dans la page, comme celles de YouTube, ajouter la ligne
+  `integration: https://…` : c'est l'adresse qui suit `src=` dans le code proposé par le
+  site d'origine (bouton « Intégrer » ou « Partager »). Si ce code contient un instant de
+  départ (`?t=6780`), le garder dans l'adresse et le reporter dans `debut: 6780`.
 - `vignette` et `affiche` : déposer les images dans `assets/img/` (**Add file → Upload
   files**), puis indiquer leur nom précédé de `img/`. La vignette est recadrée en 16:9 ;
   l'affiche garde ses proportions et s'agrandit au clic. Elle n'apparaît que sur la page
   « Conférences et interventions ».
 
 Pour ajouter une intervention, copier une entrée, l'adapter et la coller n'importe où dans
-la liste. Rien n'est chargé depuis YouTube tant que le visiteur ne clique pas sur une vignette.
+la liste. Rien n'est chargé depuis YouTube, Canal-U ou un autre hébergeur tant que le visiteur ne clique pas sur une vignette.
 
 ## Changer la photo
 

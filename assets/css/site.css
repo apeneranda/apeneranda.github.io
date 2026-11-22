@@ -144,6 +144,10 @@ main { min-height: 70vh; }
   position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden;
   border-radius: 6px; background: #000; box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 0 0 1px var(--border);
 }
+/* Sans vignette : cadre neutre portant le nom de l'hébergeur */
+.video-frame-vide { background: linear-gradient(135deg, #2a3442, #12161c); }
+.video-host::first-letter { text-transform: uppercase; }
+.video-host { position: absolute; left: 16px; bottom: 12px; color: rgba(255,255,255,.82); font-size: .9rem; font-weight: 500; letter-spacing: .02em; }
 .video-frame img, .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
 .video-play {
   position: absolute; inset: 0; margin: auto; width: 72px; height: 72px; border-radius: 50%;

@@ -54,8 +54,8 @@ cv_fr: CV en français
 cv_en: CV en anglais
 interventions: Interventions récentes
 video_lire: Lire la vidéo
-video_note: Vidéo hébergée par YouTube, chargée uniquement au clic.
-video_youtube: Voir sur YouTube
+video_note: "Vidéo hébergée par {{ . }}, chargée uniquement au clic."
+video_voir: "Voir sur {{ . }}"
 # Conférences
 conferences_toutes: Toutes les conférences et interventions
 video_debut: "L'intervention commence à {{ . }}."

@@ -7,28 +7,44 @@
 {{- $watch := "" -}}
 {{- $embed := "" -}}
 {{- $debut := "" -}}
+{{- $heb := $t.hebergeur -}}
+{{- $s := 0 -}}
+{{- with $c.debut -}}
+  {{- $s = int . -}}
+  {{- $debut = printf "%d:%02d" (div $s 60) (mod $s 60) -}}
+  {{- if ge $s 3600 }}{{ $debut = printf "%d:%02d:%02d" (div $s 3600) (mod (div $s 60) 60) (mod $s 60) }}{{ end -}}
+{{- end -}}
 {{- with $c.youtube -}}
+  {{- /* YouTube : adresses construites à partir de l'identifiant */ -}}
+  {{- $heb = "YouTube" -}}
   {{- $watch = printf "https://www.youtube.com/watch?v=%s" . -}}
   {{- $embed = printf "https://www.youtube-nocookie.com/embed/%s?autoplay=1&rel=0" . -}}
-  {{- with $c.debut -}}
-    {{- $s := int . -}}
+  {{- if $s -}}
     {{- $watch = printf "%s&t=%ds" $watch $s -}}
     {{- $embed = printf "%s&start=%d" $embed $s -}}
-    {{- $debut = printf "%d:%02d" (div $s 60) (mod $s 60) -}}
-    {{- if ge $s 3600 }}{{ $debut = printf "%d:%02d:%02d" (div $s 3600) (mod (div $s 60) 60) (mod $s 60) }}{{ end -}}
+  {{- end -}}
+{{- else -}}
+  {{- /* Autre hébergeur : adresse du lecteur (src du code d'intégration) dans « integration » */ -}}
+  {{- with $c.integration -}}
+    {{- $embed = . -}}
+    {{- if not $heb }}{{ $heb = (urls.Parse .).Hostname }}{{ end -}}
   {{- end -}}
 {{- end -}}
-{{- $lien := $watch | default $c.url -}}
+{{- $lien := $watch | default $c.url | default $embed -}}
 <article class="talk{{ if $poster }} talk-with-poster{{ end }}">
   {{ printf "<%s class=\"video-event\">" $h | safeHTML }}{{ $t.evenement }} <span class="video-where">{{ with $t.lieu }}{{ . }} · {{ end }}{{ time.AsTime $c.date | time.Format ":date_long" }}</span>{{ printf "</%s>" $h | safeHTML }}
   <div class="talk-body">
     <figure class="talk-media">
-      {{- /* Vignette locale : le lecteur YouTube n'est chargé qu'au clic (assets/js/video.js). */}}
-      {{ if and $lien $c.vignette }}
-      <a class="video-frame" href="{{ $lien }}"{{ with $embed }} data-embed="{{ . }}"{{ end }} data-title="{{ $t.titre }}" aria-label="{{ i18n "video_lire" }} : {{ $t.titre }}">
-        {{ with resources.Get $c.vignette }}
+      {{- /* Vignette locale (ou cadre neutre) : le lecteur n'est chargé qu'au clic (assets/js/video.js). */}}
+      {{ if and $lien (or $c.vignette $embed) }}
+      <a class="video-frame{{ if not $c.vignette }} video-frame-vide{{ end }}" href="{{ $lien }}"{{ with $embed }} data-embed="{{ . }}"{{ end }} data-title="{{ $t.titre }}" aria-label="{{ i18n "video_lire" }} : {{ $t.titre }}">
+        {{ with $c.vignette }}
+        {{ with resources.Get . }}
         {{ $img := .Fill "1280x720 q82" }}
         <img src="{{ $img.RelPermalink }}" width="1280" height="720" alt="" loading="lazy">
+        {{ end }}
+        {{ else }}
+        <span class="video-host" aria-hidden="true">{{ $heb }}</span>
         {{ end }}
         <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>
       </a>
@@ -36,8 +52,8 @@
       <figcaption>
         <p class="video-title">{{ $t.titre }}</p>
         {{ with $t.description }}<p>{{ . | markdownify }}</p>{{ end }}
-        {{ if $watch }}
-        <p class="video-note">{{ i18n "video_note" }}{{ with $debut }} {{ i18n "video_debut" . }}{{ end }} <a href="{{ $watch }}">{{ i18n "video_youtube" }}</a></p>
+        {{ if $embed }}
+        <p class="video-note">{{ i18n "video_note" $heb }}{{ with $debut }} {{ i18n "video_debut" . }}{{ end }} <a href="{{ $lien }}">{{ i18n "video_voir" $heb }}</a></p>
         {{ else if $lien }}
         <p class="talk-link"><a href="{{ $lien }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>{{ with $t.hebergeur }}{{ i18n "voir_sur" . }}{{ else }}{{ i18n "enregistrement" }}{{ end }}</a></p>
         {{ end }}
