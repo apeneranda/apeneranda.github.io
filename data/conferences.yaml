@@ -38,6 +38,11 @@
   youtube: _i0EeZvr7h0
   vignette: img/rns-2026.jpg
   accueil: true
+  affiche: img/rns-2026-affiche.jpg
+  liens:
+    - url: https://www.cigref.fr/wp/wp-content/uploads/2026/06/Cahiers-RNS-2026-_-Mutations-numeriques-de-lambition-a-laction.pdf#page=26
+      fr: "Compte rendu de la séance dans Les Cahiers des RNS 2026, p. 20-21 (PDF)"
+      en: "Session report in Les Cahiers des RNS 2026, pp. 20–21 (PDF, in French)"
   fr:
     evenement: "3es Rencontres numériques de Strasbourg"
     lieu: "Parlement européen, Strasbourg"
