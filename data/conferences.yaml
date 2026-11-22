@@ -58,6 +58,21 @@
     titre: "Saint Thomas et la question de la technique [Saint Thomas and the Question of Technology]"
     description: "Lecture given at the conference organised by the Institut universitaire Saint-Pie X to mark the 800th anniversary of the birth of Saint Thomas Aquinas. In French."
 
+- date: 2024-01-26
+  url: https://www.canal-u.tv/chaines/ut1capitole/thomisme-et-droit-troisieme-session-le-thomisme-juridique-au-xxe-siecle
+  fr:
+    evenement: "Colloque « Thomisme et droit, huit siècles d'histoire »"
+    lieu: "Université Toulouse Capitole, Toulouse"
+    titre: "La vertu de justice chez Marcel De Corte"
+    description: "Communication à la troisième session du colloque, « Le thomisme juridique au XXe siècle ». La vidéo réunit l'ensemble des communications de la session."
+    hebergeur: "Canal-U"
+  en:
+    evenement: "Conference “Thomisme et droit, huit siècles d'histoire” [Thomism and Law: Eight Centuries of History]"
+    lieu: "Université Toulouse Capitole, Toulouse"
+    titre: "La vertu de justice chez Marcel De Corte [The Virtue of Justice in Marcel De Corte]"
+    description: "Paper given in the third session of the conference, on legal Thomism in the twentieth century. The video covers all the papers of the session. In French."
+    hebergeur: "Canal-U"
+
 - date: 2019-06-12
   url: https://www.canal-u.tv/chaines/ut1capitole/inforsid-2019-atelier-si2d/de-la-donnee-a-l-information-l-importance-des
   fr:
